@@ -1,0 +1,5 @@
+.*.sw*
+Fonts/*.ttf
+Vim/colors/*.vim
+Vim/autoload/*.vim
+Backup/

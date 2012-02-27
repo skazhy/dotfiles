@@ -1,0 +1,12 @@
+[user]
+    name = Karlis Lauva
+    email = skazhy@gmail.com
+
+[alias]
+    co = checkout
+
+[sendemail]
+    smtpencryption = tls
+    smtpserver = smtp.gmail.com
+    smtpuser = skazhy@gmail.com
+    smtpserverport = 587
