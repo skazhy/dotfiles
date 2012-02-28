@@ -1,6 +1,6 @@
 #! /bin/sh
 
-DDIR=`dirname $0`
+DDIR=$(cd $(dirname "$0"); pwd)
 
 # Bash
   ln -fs $DDIR/bashrc ~/.bashrc
@@ -10,7 +10,7 @@ DDIR=`dirname $0`
   ln -fs $DDIR/Fonts ~/.fonts
 
 # Git
-  ln -fs $DDIR/gitconfig ~/.gitconfig
+  ln -fs $PWD/gitconfig ~/.gitconfig
   cd $DDIR
   git submodule update --init
 
