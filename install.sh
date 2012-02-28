@@ -2,6 +2,9 @@
 
 DDIR=`dirname $0`
 
+# Bash
+  ln -fs $DDIR/bashrc ~/.bashrc
+
 # Fonts
   curl -so $DDIR/Fonts/mensch.ttf http://robey.lag.net/downloads/mensch.ttf
   ln -fs $DDIR/Fonts ~/.fonts

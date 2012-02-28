@@ -4,6 +4,7 @@ This is a work in progress, I am syncing all my boxes with this, so many things 
 
 ## Contents
 
+*  `bashrc`
 *  `gemrc`
 *  `gitconfig`
 *  Openbox config files

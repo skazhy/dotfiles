@@ -7,3 +7,9 @@
 [submodule "Vim/plugins/zencoding"]
 	path = Vim/plugins/zencoding
 	url = https://github.com/mattn/zencoding-vim
+[submodule "Vim/plugins/Tabular"]
+	path = Vim/plugins/Tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "Vim/plugins/surround"]
+	path = Vim/plugins/surround
+	url = https://github.com/tpope/vim-surround
