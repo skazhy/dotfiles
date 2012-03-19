@@ -29,6 +29,9 @@ DDIR=$(cd $(dirname "$0"); pwd)
 # Ruby
   ln -fs $DDIR/gemrc ~/.gemrc
 
+# Xmodmap
+  ln -fs $DDIR/Xmodmap ~/.Xmodmap
+  
 # Vim
   curl -so $DDIR/Vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
