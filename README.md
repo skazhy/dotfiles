@@ -9,4 +9,5 @@ This is a work in progress, I am syncing all my boxes with this, so many things 
 *  `gitconfig`
 *  Openbox config files
 *  Vim config files (`vimrc`, plugins and color schemes)
+*  `Xmodmap`
 *  `zshrc`

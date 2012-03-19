@@ -17,7 +17,7 @@ set wildignorecase
 
 " Visual settings
 set background=dark
-colorscheme solarized
+colorscheme mayansmoke
 set guifont=Mensch\ 10
 set lines=35 columns=100
 set wildignore=*.pyc
