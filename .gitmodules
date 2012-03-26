@@ -10,3 +10,6 @@
 [submodule "Vim/plugins/surround"]
 	path = Vim/plugins/surround
 	url = https://github.com/tpope/vim-surround
+[submodule "Vim/plugins/snipmate"]
+	path = Vim/plugins/snipmate
+	url = https://github.com/garbas/vim-snipmate.git

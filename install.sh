@@ -10,7 +10,9 @@ DDIR=$(cd $(dirname "$0"); pwd)
   ln -fs $DDIR/Fonts ~/.fonts
 
 # Git
-  ln -fs $PWD/gitconfig ~/.gitconfig
+  ln -fs $PWD/Git/gitconfig ~/.gitconfig
+  ln -fs $PWD/Git/gitignore ~/.gitignore.global
+  
   cd $DDIR
   git submodule update --init
 
