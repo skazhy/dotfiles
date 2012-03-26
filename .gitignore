@@ -1,6 +1,7 @@
-.*.sw*
 Fonts/*.ttf
 Vim/colors/*.vim
 Vim/autoload/*.vim
 Vim/.netrwhist
+Vim/Vim
+Openbox/Openbox
 Backup/
