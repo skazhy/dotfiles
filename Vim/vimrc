@@ -13,6 +13,7 @@ set expandtab     " Tab inserts spaces
 set autoindent    " Copy indent from previous line
 set smartindent   " Smart indenting when starting newline
 
+au Bufread,BufNewFile *.wsgi  set filetype=python
 au FileType ruby setlocal sw=2 sts=2 et
 au FileType haml setlocal sw=2 sts=2 et
 au FileType html setlocal sw=2 sts=2 et

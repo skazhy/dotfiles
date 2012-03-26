@@ -2,4 +2,5 @@
 Fonts/*.ttf
 Vim/colors/*.vim
 Vim/autoload/*.vim
+Vim/.netrwhist
 Backup/
