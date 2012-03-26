@@ -1,3 +1,5 @@
+" Reload .vimrc - :so %
+
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
@@ -11,12 +13,16 @@ set expandtab
 set autoindent
 set smartindent
 
+au FileType ruby setlocal sw=2 sts=2 et
+au FileType haml setlocal sw=2 sts=2 et
+au FileType html setlocal sw=2 sts=2 et
+
 set number
 set ignorecase
 set wildignorecase
 
 " Visual settings
-set background=dark
+set background=light
 colorscheme mayansmoke
 set guifont=Mensch\ 10
 set lines=35 columns=100
