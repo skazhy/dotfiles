@@ -28,6 +28,7 @@ set wildignore=*.pyc
 syntax on               " Enable syntax hilghlighting
 set guioptions-=r       " Remove scrollbar
 set background=light
+set nohlsearch
 colorscheme mayansmoke
 set guifont=Mensch\ 10
 set lines=35 columns=100
