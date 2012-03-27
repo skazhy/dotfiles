@@ -10,7 +10,9 @@ DDIR=$(cd $(dirname "$0"); pwd)
   ln -fs $DDIR/Fonts ~/.fonts
 
 # Git
-  ln -fs $PWD/gitconfig ~/.gitconfig
+  ln -fs $PWD/Git/gitconfig ~/.gitconfig
+  ln -fs $PWD/Git/gitignore ~/.gitignore.global
+  
   cd $DDIR
   git submodule update --init
 
@@ -29,6 +31,9 @@ DDIR=$(cd $(dirname "$0"); pwd)
 # Ruby
   ln -fs $DDIR/gemrc ~/.gemrc
 
+# Xmodmap
+  ln -fs $DDIR/Xmodmap ~/.Xmodmap
+  
 # Vim
   curl -so $DDIR/Vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim

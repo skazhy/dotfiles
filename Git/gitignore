@@ -1,0 +1,14 @@
+tags
+
+# Vim swap files
+.*.sw[a-z]
+
+# Compiled Python files
+*.pyc
+*.pyo
+
+# Django local settings
+local_settings.py
+
+# Sass cache folder
+.sass-cache/

@@ -1,23 +1,33 @@
+" Reload .vimrc - :so %
+
+" Start pathogen & load plugins
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
-syntax on
 filetype plugin indent on
 
 " Tabs
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-set smartindent
+set tabstop=4     " No. of spaces that tab couns for
+set shiftwidth=4  " No. of spaces of each step in autoindent
+set expandtab     " Tab inserts spaces
+set autoindent    " Copy indent from previous line
+set smartindent   " Smart indenting when starting newline
 
-set number
-set ignorecase
-set wildignorecase
+au Bufread,BufNewFile *.wsgi  set filetype=python
+au FileType ruby setlocal sw=2 sts=2 et
+au FileType haml setlocal sw=2 sts=2 et
+au FileType html setlocal sw=2 sts=2 et
+
+set scrolloff=2     " Keeping 2 line margin above/below cursor
+set number          " Start each line with line number
+set ignorecase      " Ignoring case when searching for file
+set wildignorecase  " Ignore filename case
+set wildignore=*.pyc
 
 " Visual settings
-set background=dark
-colorscheme solarized
+syntax on               " Enable syntax hilghlighting
+set guioptions-=r       " Remove scrollbar
+set background=light
+colorscheme mayansmoke
 set guifont=Mensch\ 10
 set lines=35 columns=100
-set wildignore=*.pyc

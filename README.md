@@ -7,6 +7,8 @@ This is a work in progress, I am syncing all my boxes with this, so many things 
 *  `bashrc`
 *  `gemrc`
 *  `gitconfig`
-*  Openbox config files
-*  Vim config files (`vimrc`, plugins and color schemes)
+*  Openbox dotfiles
+*  URxvt dotfiles (currently - `Xresources` only)
+*  Vim dotfiles (`vimrc`, plugins and color schemes - as submodules or download links)
+*  `Xmodmap`
 *  `zshrc`

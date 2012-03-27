@@ -4,12 +4,14 @@
 
 [core]
     editor = vim
+    excludesfile = ~/.gitignore.global
 
 [alias]
     co = checkout
     loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s' --graph
     rc = rm --cached
     au = add -u
+    st = status
 
 [sendemail]
     smtpencryption = tls
