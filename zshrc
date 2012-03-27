@@ -1,26 +1,22 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="norm"
 
 # Aliases
-grin() {grep -RIn "$*" ./*;}
+grin() { grep -RIn "$*" ./*; }
+frin()  { find ./* -name "*$**"; }
+alias t="tree"
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+# Insert sudo with M-s
+# http://stackoverflow.com/a/970202
+insert_sudo () { zle beginning-of-line; zle -U "sudo " }
+zle -N insert-sudo insert_sudo
+bindkey "^[s" insert-sudo
+bindkey "^[S" insert-sudo
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
 
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
 plugins=(git rvm django)
