@@ -35,9 +35,9 @@
   </item>
   
   <menu id="apps-office-menu" label="Office">
-    <item label="LibreOffice">
+    <item label="Evince">
       <action name="Execute">
-        <command>libreoffice</command>
+        <command>evince</command>
       </action>
     </item>  
     <item label="Google Docs">
@@ -45,6 +45,11 @@
         <command>firefox-nightly https://docs.google.com</command>
       </action>
     </item>
+    <item label="LibreOffice">
+      <action name="Execute">
+        <command>libreoffice</command>
+      </action>
+    </item>  
   </menu>
   
   <menu id="apps-graphics-menu" label="Graphics">
