@@ -23,6 +23,10 @@ set number          " Start each line with line number
 set ignorecase      " Ignoring case when searching for file
 set wildignorecase  " Ignore filename case
 set wildignore=*.pyc
+cd /home/karlis/Projects/
+
+" Disable ex mode
+map Q <Nop>
 
 " Visual settings
 syntax on               " Enable syntax hilghlighting
