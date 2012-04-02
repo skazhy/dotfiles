@@ -13,3 +13,6 @@
 [submodule "Vim/plugins/snipmate"]
 	path = Vim/plugins/snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "Vim/plugins/NERDTree"]
+	path = Vim/plugins/NERDTree
+	url = https://github.com/scrooloose/nerdtree.git

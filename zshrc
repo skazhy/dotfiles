@@ -8,6 +8,8 @@ grin() { grep -RIn "$*" ./*; }
 frin()  { find ./* -name "*$**"; }
 alias t="tree"
 
+ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
+
 # Insert sudo with M-s
 # http://stackoverflow.com/a/970202
 insert_sudo () { zle beginning-of-line; zle -U "sudo " }
