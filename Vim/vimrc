@@ -4,7 +4,7 @@
 call pathogen#infect('plugins')
 call pathogen#helptags()
 
-filetype plugin indent on
+filetype plugin on
 
 " Tabs
 set tabstop=4     " No. of spaces that tab couns for
@@ -18,11 +18,17 @@ au FileType ruby setlocal sw=2 sts=2 et
 au FileType haml setlocal sw=2 sts=2 et
 au FileType html setlocal sw=2 sts=2 et
 
+" Loading json filetype
+au BufRead,BufNewFile *.json set filetype=json
+au! Syntax json source /home/karlis/.vim/ftplugin/json.vim
+
+
 set scrolloff=2     " Keeping 2 line margin above/below cursor
 set number          " Start each line with line number
 set ignorecase      " Ignoring case when searching for file
 set wildignorecase  " Ignore filename case
 set wildignore=*.pyc
+
 cd /home/karlis/Projects/
 
 " Disable ex mode
