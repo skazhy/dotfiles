@@ -42,3 +42,9 @@ set nohlsearch
 colorscheme mayansmoke
 set guifont=Mensch\ 10
 set lines=35 columns=100
+
+" Disable arrow keys
+noremap <Left>  <Nop>
+noremap <Right> <Nop>
+noremap <Up>    <Nop>
+noremap <Down>  <Nop>
