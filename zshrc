@@ -21,7 +21,7 @@ bindkey "^[S" insert-sudo
 # DISABLE_AUTO_TITLE="true"
 
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(git rvm django)
+plugins=(git rvm django npm)
 
 source $ZSH/oh-my-zsh.sh
 
