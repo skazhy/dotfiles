@@ -18,6 +18,8 @@ au FileType ruby setlocal sw=2 sts=2 et
 au FileType haml setlocal sw=2 sts=2 et
 au FileType html setlocal sw=2 sts=2 et
 
+au FileType python setlocal colorcolumn=80 
+
 " Loading json filetype
 au BufRead,BufNewFile *.json set filetype=json
 au! Syntax json source /home/karlis/.vim/ftplugin/json.vim
@@ -48,3 +50,8 @@ noremap <Left>  <Nop>
 noremap <Right> <Nop>
 noremap <Up>    <Nop>
 noremap <Down>  <Nop>
+
+inoremap <Left>  <Nop>
+inoremap <Right> <Nop>
+inoremap <Up>    <Nop>
+inoremap <Down>  <Nop>
