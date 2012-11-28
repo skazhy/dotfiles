@@ -8,9 +8,12 @@
 
 [alias]
     co = checkout
-    loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s' --graph
+    ci = commit
+    wtf = reset --hard HEAD
+    loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s %Cred%d%Creset' --graph
     rc = rm --cached
     au = add -u
+    ap = add -p
     st = status
 
 [sendemail]
