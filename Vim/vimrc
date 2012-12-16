@@ -20,6 +20,14 @@ au FileType html setlocal sw=2 sts=2 et
 
 au FileType python setlocal colorcolumn=80 
 
+" Don't create swap files in Dropbox
+au BufRead,BufNewFile *
+\ if expand('%:~') =~ '^\~/Dropbox' |
+\ set noswapfile |
+\ else |
+\ set swapfile |
+\ endif
+
 " Loading json filetype
 au BufRead,BufNewFile *.json set filetype=json
 au! Syntax json source /home/karlis/.vim/ftplugin/json.vim
