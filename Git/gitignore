@@ -12,3 +12,6 @@ local_settings.py
 
 # Sass cache folder
 .sass-cache/
+
+# Virtualenv
+env/
