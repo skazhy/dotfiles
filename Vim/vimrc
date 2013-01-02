@@ -18,7 +18,7 @@ au FileType ruby setlocal sw=2 sts=2 et
 au FileType haml setlocal sw=2 sts=2 et
 au FileType html setlocal sw=2 sts=2 et
 
-au FileType python setlocal colorcolumn=80 
+au FileType python setlocal colorcolumn=80
 
 " Don't create swap files in Dropbox
 au BufRead,BufNewFile *
@@ -53,13 +53,27 @@ colorscheme mayansmoke
 set guifont=Mensch\ 10
 set lines=35 columns=100
 
-" Disable arrow keys
-noremap <Left>  <Nop>
-noremap <Right> <Nop>
-noremap <Up>    <Nop>
-noremap <Down>  <Nop>
+" Use arrow keys for buffer manipulation
+noremap <Left>  :bprevious<cr>
+noremap <Right> :bnext<cr>
+noremap <Up>    :bdelete<cr>
+noremap <Down>  :buffers<cr>
 
-inoremap <Left>  <Nop>
-inoremap <Right> <Nop>
-inoremap <Up>    <Nop>
-inoremap <Down>  <Nop>
+inoremap <Left>  :bprevious<cr>
+inoremap <Right> :bnext<cr>
+inoremap <Up>    :bdelete<cr>
+inoremap <Down>  :buffers<cr>
+
+set hidden " Allows movement between modified buffers
+
+function VerticalSplitBuffer(buffer)
+    execute "vert belowright sb" a:buffer
+endfunction
+
+function! GitCheckOut(buff)
+    execute "Git co" a:buff
+    execute "edit!"
+endfunction
+
+command -nargs=1 Vb call VerticalSplitBuffer(<f-args>)
+command! -nargs=1 Gco call GitCheckOut(<f-args>)
