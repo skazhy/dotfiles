@@ -3,6 +3,7 @@ Vim/colors/*.vim
 Vim/autoload/*.vim
 Vim/.netrwhist
 Vim/Vim
+Vim/syntax/*.vim
 Openbox/Openbox
 Fonts/Fonts
 Backup/

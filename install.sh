@@ -12,7 +12,7 @@ DDIR=$(cd $(dirname "$0"); pwd)
 # Git
   ln -fs $PWD/Git/gitconfig ~/.gitconfig
   ln -fs $PWD/Git/gitignore ~/.gitignore.global
-  
+
   cd $DDIR
   git submodule update --init
 
@@ -33,19 +33,21 @@ DDIR=$(cd $(dirname "$0"); pwd)
 
 # Xmodmap
   ln -fs $DDIR/Xmodmap ~/.Xmodmap
-  
+
 # Vim
   curl -so $DDIR/Vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-  
+
+  # Color schemes
   curl -so $DDIR/Vim/colors/solarized.vim \
     https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-  curl -so $DDIR/Vim/colors/pyte.vim \
-    https://raw.github.com/vim-scripts/pyte/master/colors/pyte.vim
   curl -so $DDIR/Vim/colors/mayansmoke.vim \
     https://raw.github.com/vim-scripts/mayansmoke/master/colors/mayansmoke.vim
   curl -so $DDIR/Vim/colors/moria.vim \
     https://raw.github.com/vim-scripts/moria/master/colors/moria.vim
+  # Syntax highliting
+  curl -so $DDIR/Vim/syntax/scala.vim \
+    https://raw.github.com/scala/scala-dist/master/tool-support/src/vim/syntax/scala.vim
 
   ln -fs $DDIR/Vim/vimrc ~/.vimrc
   ln -fs $DDIR/Vim ~/.vim

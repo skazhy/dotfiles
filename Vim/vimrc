@@ -13,13 +13,13 @@ set expandtab     " Tab inserts spaces
 set autoindent    " Copy indent from previous line
 set smartindent   " Smart indenting when starting newline
 
+au BufRead,BufNewFile *.scala set filetype=scala
 au Bufread,BufNewFile *.wsgi  set filetype=python
 au FileType ruby setlocal sw=2 sts=2 et
 au FileType haml setlocal sw=2 sts=2 et
 au FileType html setlocal sw=2 sts=2 et
 
 au FileType python setlocal colorcolumn=80
-
 " Don't create swap files in Dropbox
 au BufRead,BufNewFile *
 \ if expand('%:~') =~ '^\~/Dropbox' |
@@ -47,9 +47,9 @@ map Q <Nop>
 " Visual settings
 syntax on               " Enable syntax hilghlighting
 set guioptions-=r       " Remove scrollbar
-set background=light
+set background=dark
 set nohlsearch
-colorscheme mayansmoke
+colorscheme solarized
 set guifont=Mensch\ 10
 set lines=35 columns=100
 
