@@ -5,6 +5,10 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore.global
+    pager = ""
+
+[color]
+    ui = true
 
 [alias]
     co = checkout
