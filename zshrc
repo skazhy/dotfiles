@@ -7,6 +7,7 @@ ZSH_THEME="norm"
 grin() { grep -RIn "$*" ./*; }
 frin()  { find ./* -name "*$**"; }
 alias t="tree"
+alias virtualenv="virtualenv --distribute"
 
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
 

@@ -59,10 +59,10 @@ noremap <Right> :bnext<cr>
 noremap <Up>    :bdelete<cr>
 noremap <Down>  :buffers<cr>
 
-inoremap <Left>  :bprevious<cr>
-inoremap <Right> :bnext<cr>
-inoremap <Up>    :bdelete<cr>
-inoremap <Down>  :buffers<cr>
+inoremap <Left>  <esc>:bprevious<cr>
+inoremap <Right> <esc>:bnext<cr>
+inoremap <Up>    <esc>:bdelete<cr>
+inoremap <Down>  <esc>:buffers<cr>
 
 set hidden " Allows movement between modified buffers
 
