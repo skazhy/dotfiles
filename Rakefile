@@ -14,18 +14,36 @@ def fetch(uri, dest)
   File.open(dest, 'w') { |file| file.write(resp.body) }
 end
 
-def symlink(src, dest)
-  # TODO: check if present
-  #File.symlink(src, dest)
+def sym(src, dest)
+  full_src = File.expand_path(src)
+  full_dest = File.expand_path(dest)
+
+  if File.exists? full_dest
+    puts "File #{dest} exists, please back-it-up."
+  else
+    File.symlink(full_src, full_dest)
+  end
 end
 
+def spawner(cmd)
+  pid = Process.spawn(cmd)
+  trap('INT') {
+    Process.kill(pid, 9)
+    exit 0
+  }
+  Process.wait(pid)
+end
+
+# Install everything
 task :install => "install:all"
 
 namespace :install do
+  # Symlink bash config
   task :bash do
     symlink("bashrc", "~/.bashrc")
   end
 
+  # Get all fonts
   task :fonts do
     resources["Fonts"].each do |font|
       dest = "Fonts/#{font["name"]}"
@@ -35,20 +53,24 @@ namespace :install do
     symlink("Fonts", "~/.fonts")
   end
 
+  # Symlink Git config
   task :git do
-    symlink("Git/gitignore", "~/.gitignore.global")
-    symlink("Git/gitconfig", "~/.gitconfig")
+    sym("Git/gitignore", "~/.gitignore.global")
+    sym("Git/gitconfig", "~/.gitconfig")
   end
 
+  # Symlink Ruby stuff
   task :ruby do
     symlink("gemrc", "~/.gemrc")
   end
 
+  # Get all plugins and symlink Vim config
   task :vim => "sync:vim" do
-    symlink("Vim/vimrc", "~/.aimrc")
-    symlink("Vim", "~/.aim")
+    sym("Vim/vimrc", "~/.vimrc")
+    sym("Vim", "~/.vim")
   end
 
+  # Symlink zshrc
   task :zsh do
     # TODO: install oh-my-zsh & extra plugins
     symlink("zshrc", "~/.zshrc")
@@ -56,30 +78,29 @@ namespace :install do
 
   task :all => [:bash, :fonts, :git, :ruby, :vim, :zsh, "update:all"]
 
-  # Extra stuff
+  # Symlink OpenBox config
   task :openbox do
     # TODO
   end
 
+  # Symlink Xmodmap
   task :xmodmap do
     symlink("Xmodmap", "~/.Xmodmap")
   end
 end
 
 
+# Sync all
 task :update => "update:all"
 
 namespace :sync do
+  # Update and/or initialize git submodules
   task :git do
-    gitproc = Process.spawn('git submodule update --init')
-    trap('INT') {
-     Process.kill(gitproc, 9)
-     exit 0
-    }
-    Process.wait(gitproc)
+    spawner('git submodule update --init')
   end
 
-  task :vim do
+  # Download Vim resources & sync plugin submodules
+  task :vim => :git do
     resources["Vim"].each do |res_name, res_list|
       res_list.each do |res|
         dest = "Vim/#{res_name}/#{res["name"]}"
@@ -89,5 +110,11 @@ namespace :sync do
     end
   end
 
+  # Update oh-my-zsh
+  task :zsh do
+    # TODO
+  end
+
+  # Sync all
   task :all => [:git, :vim]
 end

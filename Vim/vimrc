@@ -32,6 +32,9 @@ au BufRead,BufNewFile *
 au BufRead,BufNewFile *.json set filetype=json
 au! Syntax json source /home/karlis/.vim/ftplugin/json.vim
 
+" Remove trailing whitespace on save
+au BufWritePre * :%s/\s\+$//e
+
 
 set scrolloff=2     " Keeping 2 line margin above/below cursor
 set number          " Start each line with line number
@@ -66,7 +69,7 @@ inoremap <Down>  <esc>:buffers<cr>
 
 set hidden " Allows movement between modified buffers
 
-function VerticalSplitBuffer(buffer)
+function! VerticalSplitBuffer(buffer)
     execute "vert belowright sb" a:buffer
 endfunction
 
