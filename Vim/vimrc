@@ -1,4 +1,7 @@
 " Reload .vimrc - :so %
+"
+" Specific Python, Ruby & JSON stuff is
+" in their respective ftplugin file
 
 " Start pathogen & load plugins
 call pathogen#infect('plugins')
@@ -15,7 +18,6 @@ set smartindent   " Smart indenting when starting newline
 
 au BufRead,BufNewFile *.scala set filetype=scala
 au Bufread,BufNewFile *.wsgi  set filetype=python
-au FileType ruby setlocal sw=2 sts=2 et
 au FileType haml setlocal sw=2 sts=2 et
 au FileType html setlocal sw=2 sts=2 et
 
@@ -33,7 +35,6 @@ au! Syntax json source /home/karlis/.vim/ftplugin/json.vim
 
 " Remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
-
 
 set scrolloff=2     " Keeping 2 line margin above/below cursor
 set number          " Start each line with line number
