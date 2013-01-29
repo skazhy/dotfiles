@@ -1,7 +1,7 @@
 " Reload .vimrc - :so %
 "
-" Specific Python, Ruby & JSON stuff is
-" in their respective ftplugin file
+" Language specific stuff is located
+" in ftplugin and ftdetect folders
 
 " Start pathogen & load plugins
 call pathogen#infect('plugins')
@@ -16,11 +16,6 @@ set expandtab     " Tab inserts spaces
 set autoindent    " Copy indent from previous line
 set smartindent   " Smart indenting when starting newline
 
-au BufRead,BufNewFile *.scala set filetype=scala
-au Bufread,BufNewFile *.wsgi  set filetype=python
-au FileType haml setlocal sw=2 sts=2 et
-au FileType html setlocal sw=2 sts=2 et
-
 " Don't create swap files in Dropbox
 au BufRead,BufNewFile *
 \ if expand('%:~') =~ '^\~/Dropbox' |
@@ -29,17 +24,14 @@ au BufRead,BufNewFile *
 \ set swapfile |
 \ endif
 
-" Loading json filetype
-au BufRead,BufNewFile *.json set filetype=json
-au! Syntax json source /home/karlis/.vim/ftplugin/json.vim
-
 " Remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 
+set history=50      " Remember 50 last commands / patterns
 set scrolloff=2     " Keeping 2 line margin above/below cursor
 set number          " Start each line with line number
-set ignorecase      " Ignoring case when searching for file
 set wildignorecase  " Ignore filename case
+set ignorecase smartcase
 set wildignore=*.pyc
 
 cd /home/karlis/Projects/
@@ -53,7 +45,10 @@ set guioptions-=r       " Remove scrollbar
 set background=dark
 set nohlsearch
 colorscheme solarized
-set guifont=Mensch\ 10
+
+if has("gui_running")
+  set guifont=Mensch\ 10
+endif
 
 " Use arrow keys for buffer manipulation
 noremap <Left>  :bprevious<cr>
@@ -72,10 +67,4 @@ function! VerticalSplitBuffer(buffer)
     execute "vert belowright sb" a:buffer
 endfunction
 
-function! GitCheckOut(buff)
-    execute "Git co" a:buff
-    execute "edit!"
-endfunction
-
 command! -nargs=1 Vb call VerticalSplitBuffer(<f-args>)
-command! -nargs=1 Gco call GitCheckOut(<f-args>)
