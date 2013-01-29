@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.json set filetype=javascript
