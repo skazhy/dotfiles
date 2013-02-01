@@ -40,7 +40,7 @@ task :install => "install:all"
 namespace :install do
   # Symlink bash config
   task :bash do
-    symlink("bashrc", "~/.bashrc")
+    symlink("Shells/bashrc", "~/.bashrc")
   end
 
   # Get all fonts
@@ -61,16 +61,16 @@ namespace :install do
 
   # Symlink Ruby stuff
   task :ruby do
-    symlink("gemrc", "~/.gemrc")
+    symlink("Ruby/gemrc", "~/.gemrc")
   end
 
   # Symlink tmux config
   task :tmux do
-    sym("tmux.conf", "~/.tmux.conf")
+    sym("Shells/tmux.conf", "~/.tmux.conf")
   end
 
   # Get all plugins and symlink Vim config
-  task :vim => "sync:vim" do
+  task :vim => "update:vim" do
     sym("Vim/vimrc", "~/.vimrc")
     sym("Vim", "~/.vim")
   end
@@ -78,7 +78,7 @@ namespace :install do
   # Symlink zshrc
   task :zsh do
     # TODO: install oh-my-zsh & extra plugins
-    symlink("zshrc", "~/.zshrc")
+    symlink("Shells/zshrc", "~/.zshrc")
   end
 
   task :all => [:bash, :fonts, :git, :ruby, :vim, :tmux, :zsh, "update:all"]
@@ -90,21 +90,21 @@ namespace :install do
 
   # Symlink Xmodmap
   task :xmodmap do
-    symlink("Xmodmap", "~/.Xmodmap")
+    symlink("Xorg/Xmodmap", "~/.Xmodmap")
   end
 end
 
 
-# Sync all
+# update all
 task :update => "update:all"
 
-namespace :sync do
+namespace :update do
   # Update and/or initialize git submodules
   task :git do
     spawner('git submodule update --init')
   end
 
-  # Download Vim resources & sync plugin submodules
+  # Download Vim resources & update plugin submodules
   task :vim => :git do
     resources["Vim"].each do |res_name, res_list|
       res_list.each do |res|
@@ -120,6 +120,6 @@ namespace :sync do
     # TODO
   end
 
-  # Sync all
+  # update all
   task :all => [:git, :vim]
 end
