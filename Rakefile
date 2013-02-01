@@ -64,6 +64,11 @@ namespace :install do
     symlink("gemrc", "~/.gemrc")
   end
 
+  # Symlink tmux config
+  task :tmux do
+    sym("tmux.conf", "~/.tmux.conf")
+  end
+
   # Get all plugins and symlink Vim config
   task :vim => "sync:vim" do
     sym("Vim/vimrc", "~/.vimrc")
@@ -76,7 +81,7 @@ namespace :install do
     symlink("zshrc", "~/.zshrc")
   end
 
-  task :all => [:bash, :fonts, :git, :ruby, :vim, :zsh, "update:all"]
+  task :all => [:bash, :fonts, :git, :ruby, :vim, :tmux, :zsh, "update:all"]
 
   # Symlink OpenBox config
   task :openbox do
