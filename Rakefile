@@ -40,7 +40,7 @@ task :install => "install:all"
 namespace :install do
   # Symlink bash config
   task :bash do
-    symlink("Shells/bashrc", "~/.bashrc")
+    sym("Bash/bashrc", "~/.bashrc")
   end
 
   # Get all fonts
@@ -50,7 +50,7 @@ namespace :install do
       puts "Downloading #{font["name"]}..."
       fetch font["uri"], dest
     end
-    symlink("Fonts", "~/.fonts")
+    sym("Fonts", "~/.fonts")
   end
 
   # Symlink Git config
@@ -61,12 +61,12 @@ namespace :install do
 
   # Symlink Ruby stuff
   task :ruby do
-    symlink("Ruby/gemrc", "~/.gemrc")
+    sym("Ruby/gemrc", "~/.gemrc")
   end
 
   # Symlink tmux config
   task :tmux do
-    sym("Shells/tmux.conf", "~/.tmux.conf")
+    sym("Tmux/tmux.conf", "~/.tmux.conf")
   end
 
   # Get all plugins and symlink Vim config
@@ -78,7 +78,8 @@ namespace :install do
   # Symlink zshrc
   task :zsh do
     # TODO: install oh-my-zsh & extra plugins
-    symlink("Shells/zshrc", "~/.zshrc")
+    sym("Zsh/zshrc", "~/.zshrc")
+    sym("Zsh/icanhastheme.zsh-theme", "~/.oh-my-zsh/themes/icanhastheme.zsh-theme")
   end
 
   task :all => [:bash, :fonts, :git, :ruby, :vim, :tmux, :zsh, "update:all"]
@@ -90,7 +91,7 @@ namespace :install do
 
   # Symlink Xmodmap
   task :xmodmap do
-    symlink("Xorg/Xmodmap", "~/.Xmodmap")
+    sym("Xorg/Xmodmap", "~/.Xmodmap")
   end
 end
 
