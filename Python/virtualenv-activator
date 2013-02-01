@@ -32,7 +32,8 @@ deactivate () {
 # unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/karlis/Projects/Seotool/env"
+ep=$(dirname `echo $PWD/$0`)
+VIRTUAL_ENV=$(dirname `echo $ep`)
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
