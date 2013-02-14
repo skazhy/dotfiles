@@ -15,6 +15,11 @@ mkvirtualenv() {
   virtualenv --distribute env &> /dev/null
   rm -f ./env/bin/activate
   ln -s $DOTFILES_DIR/Python/virtualenv-activator ./env/bin/activate
+  source env/bin/activate
+}
+
+activate() {
+  source env/bin/activate
 }
 
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
