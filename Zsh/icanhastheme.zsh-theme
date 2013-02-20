@@ -6,7 +6,7 @@
 
 
 function pwd_prompt {
-    echo $(basename $PWD)
+    if [ "$PWD" = "$HOME" ]; then  echo "~"; else echo $(basename $PWD); fi
 }
 
 function virtualenv_prompt {
@@ -18,7 +18,7 @@ function rvm_prompt {
 }
 
 
-PROMPT='$(pwd_prompt)$(git_prompt_info)%{$reset_color%}$(virtualenv_prompt)$(rvm_prompt) '
+PROMPT='$(pwd_prompt)$(git_prompt_info)%{$reset_color%}$(virtualenv_prompt)$(rvm_prompt)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
