@@ -32,7 +32,7 @@ set scrolloff=2     " Keeping 2 line margin above/below cursor
 set number          " Start each line with line number
 set wildignorecase  " Ignore filename case
 set ignorecase smartcase
-set wildignore=*.pyc
+set wildignore=*.pyc,*.pdf
 
 " Disable ex mode
 map Q <Nop>
