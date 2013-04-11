@@ -2,7 +2,7 @@ tags
 .DS_Store
 
 # Vim swap files
-.*.sw[a-z]
+.*sw[a-z]
 
 # Compiled Python files
 *.pyc
