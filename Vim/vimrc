@@ -34,8 +34,6 @@ set wildignorecase  " Ignore filename case
 set ignorecase smartcase
 set wildignore=*.pyc
 
-cd /home/karlis/Projects/
-
 " Disable ex mode
 map Q <Nop>
 
@@ -45,10 +43,6 @@ set guioptions-=r       " Remove scrollbar
 set background=dark
 set nohlsearch
 colorscheme solarized
-
-if has("gui_running")
-  set guifont=Mensch\ 10
-endif
 
 " Use arrow keys for buffer manipulation
 noremap <Left>  :bprevious<cr>
@@ -66,8 +60,13 @@ inoremap # X<BS>#
 
 set hidden " Allows movement between modified buffers
 
-function! VerticalSplitBuffer(buffer)
-    execute "vert belowright sb" a:buffer
-endfunction
+" Statusline
+set laststatus=2         " omnipresent statusline
+set statusline=          " clear statusline on vimrc reload
+set statusline+=%-3.3n\  " bufer number
+set statusline+=%f\      " file name
+set statusline+=%m%r%w   " flags (modified, readonly, preview)
 
-command! -nargs=1 Vb call VerticalSplitBuffer(<f-args>)
+set statusline+=[%{strlen(&ft)?&ft:'none'}]%=                      " filetype
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+set statusline+=%-14.(%l,%c%V%)\ %<%P                              " offset
