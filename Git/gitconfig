@@ -5,7 +5,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore.global
-    pager = ""
+    pager = "less -x5,9"
 
 [color]
     ui = true
