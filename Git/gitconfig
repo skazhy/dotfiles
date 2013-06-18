@@ -19,8 +19,8 @@
     au = add -u
     ap = add -p
     st = status
-    ddr = !sh -c 'git diff --no-prefix > ~/Dropbox/patches/$(basename $(git rev-parse --show-toplevel)).patch'
-    cos = !sh -c 'git stash > /dev/null $1 && git checkout $1 && git stash apply > /dev/null'
+    rf = reflog -n 20
+    ds = diff --staged
 
 [sendemail]
     smtpencryption = tls
