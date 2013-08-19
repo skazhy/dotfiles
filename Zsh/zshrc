@@ -30,3 +30,6 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # Don't mess with window title
 DISABLE_AUTO_TITLE=true
+
+# Load credentials, if any
+[[ -s "$HOME/.cred.sh" ]] && source "$HOME/.cred.sh"
