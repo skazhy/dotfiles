@@ -30,9 +30,12 @@ au BufWritePre * :%s/\s\+$//e
 set history=50      " Remember 50 last commands / patterns
 set scrolloff=2     " Keeping 2 line margin above/below cursor
 set number          " Start each line with line number
-set wildignorecase  " Ignore filename case
 set ignorecase smartcase
 set wildignore=*.pyc,*.pdf
+
+if has("wildignorecase")  " Ignore filename case
+  set wildignorecase      " where it is possible
+end
 
 " Disable ex mode
 map Q <Nop>
