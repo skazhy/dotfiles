@@ -10,13 +10,17 @@ frin()  { find ./* -name "*$**"; }
 
 mkvirtualenv() {
   virtualenv --distribute env &> /dev/null
-  rm -f ./env/bin/activate
-  ln -s $DOTFILES_DIR/Python/virtualenv-activator ./env/bin/activate
+  # rm -f ./env/bin/activate
+  # ln -s $DOTFILES_DIR/Python/virtualenv-activator ./env/bin/activate
   source env/bin/activate
 }
 
 activate() {
-  source env/bin/activate
+  source $(git rev-parse --show-toplevel)/env/bin/activate
+}
+
+procgrep() {
+  ps aux | head -1 && grep "$*" <(ps aux) | sed '$d' | awk '{ sub(/[ \t]+$/, ""); print }'
 }
 
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
