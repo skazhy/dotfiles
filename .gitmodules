@@ -3,7 +3,7 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "Vim/plugins/zencoding"]
 	path = Vim/plugins/zencoding
-	url = https://github.com/mattn/zencoding-vim
+	url = https://github.com/mattn/emmet-vim
 [submodule "Vim/plugins/Tabular"]
 	path = Vim/plugins/Tabular
 	url = https://github.com/godlygeek/tabular
