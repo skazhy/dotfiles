@@ -4,7 +4,7 @@
 " in ftplugin and ftdetect folders
 
 " Start pathogen & load plugins
-call pathogen#infect('plugins')
+call pathogen#infect('plugins/{}')
 call pathogen#helptags()
 
 filetype plugin on
@@ -40,6 +40,8 @@ map Q <Nop>
 " Visual settings
 syntax on               " Enable syntax hilghlighting
 set guioptions-=r       " Remove scrollbar
+set guioptions-=T       " Remove toolbar
+set guioptions-=m       " Remove menubar
 set background=dark
 set nohlsearch
 colorscheme solarized
@@ -70,3 +72,6 @@ set statusline+=%m%r%w   " flags (modified, readonly, preview)
 set statusline+=[%{strlen(&ft)?&ft:'none'}]%=                      " filetype
 set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
 set statusline+=%-14.(%l,%c%V%)\ %<%P                              " offset
+
+" NERDTree tweaks
+let NERDTreeIgnore = ['\.pyc$']
