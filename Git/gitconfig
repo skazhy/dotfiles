@@ -12,6 +12,7 @@
 
 [alias]
     co = checkout
+    cop = checkout -p
     ci = commit
     wtf = reset --hard HEAD
     loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s %Cred%d%Creset' --graph

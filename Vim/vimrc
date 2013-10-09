@@ -37,6 +37,11 @@ if has("wildignorecase")  " Ignore filename case
   set wildignorecase      " where it is possible
 end
 
+if has("gui_running")
+  set incsearch
+  set wildmenu
+end
+
 " Disable ex mode
 map Q <Nop>
 
@@ -75,6 +80,7 @@ set statusline+=%m%r%w   " flags (modified, readonly, preview)
 set statusline+=[%{strlen(&ft)?&ft:'none'}]%=                      " filetype
 set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
 set statusline+=%-14.(%l,%c%V%)\ %<%P                              " offset
+
 
 " NERDTree tweaks
 let NERDTreeIgnore = ['\.pyc$']
