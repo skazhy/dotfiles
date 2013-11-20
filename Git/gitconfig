@@ -12,15 +12,14 @@
 
 [alias]
     co = checkout
-    cop = checkout -p
+    cp = checkout -p
     ci = commit
+    ca = commit --amend
     wtf = reset --hard HEAD
     loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s %Cred%d%Creset' --graph
-    rc = rm --cached
     au = add -u
     ap = add -p
-    st = status
-    rf = reflog -n 20
+    st = status --ignore-submodules=dirty
     ds = diff --staged
 
 [sendemail]
@@ -28,3 +27,6 @@
     smtpserver = smtp.gmail.com
     smtpuser = skazhy@gmail.com
     smtpserverport = 587
+
+[push]
+    default = current
