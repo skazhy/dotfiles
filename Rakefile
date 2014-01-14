@@ -64,6 +64,11 @@ namespace :install do
     sym("Ruby/gemrc", "~/.gemrc")
   end
 
+  # Symlink Scala & SBT config
+  task :scala do
+    sym("Scala/sbtconfig", "~/.sbtconfig")
+  end
+
   # Symlink tmux config
   task :tmux do
     sym("Tmux/tmux.conf", "~/.tmux.conf")
@@ -82,7 +87,7 @@ namespace :install do
     sym("Zsh/icanhastheme.zsh-theme", "~/.oh-my-zsh/themes/icanhastheme.zsh-theme")
   end
 
-  task :all => [:bash, :fonts, :git, :ruby, :vim, :tmux, :zsh, "update:all"]
+  task :all => [:bash, :fonts, :git, :ruby, :scala, :vim, :tmux, :zsh, "update:all"]
 
   # Symlink OpenBox config
   task :openbox do
