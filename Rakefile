@@ -84,7 +84,6 @@ namespace :install do
   task :zsh do
     # TODO: install oh-my-zsh & extra plugins
     sym("Zsh/zshrc", "~/.zshrc")
-    sym("Zsh/icanhastheme.zsh-theme", "~/.oh-my-zsh/themes/icanhastheme.zsh-theme")
   end
 
   task :all => [:bash, :fonts, :git, :ruby, :scala, :vim, :tmux, :zsh, "update:all"]
