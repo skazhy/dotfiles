@@ -5,7 +5,6 @@ require 'net/http'
 require 'json'
 
 resources = JSON.load(File.read("resources.json"))
-backup_dir = "Backup"
 
 def fetch(uri, dest)
   uri = URI.parse(uri)
@@ -18,13 +17,17 @@ end
 
 def backup(src, full_dest)
   # Backup (mv) a file from full_dest to a backup folder
+  backup_dir = "Backup"
   src_filename = File.basename(src)
   backup_dest = File.expand_path("#{backup_dir}/#{src_filename}")
 
-  unless File.exists? backup_dest
-    FileUtils.mkpath File.expahd_path(backup_dir)
-    FileUtils.mv full_dest, backup_dest
+  FileUtils.mkpath File.expand_path(backup_dir)
+  FileUtils.mv full_dest, backup_dest
+
+  if File.size? backup_dest
     puts "Backup of #{src_filename} created in #{backup_dest}"
+  else
+    File.unlink backup_dest
   end
 end
 
@@ -36,7 +39,6 @@ def sym(src, dest)
 
   if File.exists? full_dest
     backup(src, full_dest)
-    puts "File #{dest} exists, please back it-up."
   end
 
   File.symlink(full_src, full_dest)
