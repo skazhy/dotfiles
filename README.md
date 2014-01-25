@@ -11,4 +11,9 @@ I've added `rake update` in a post-merge hook, for fun and profit.
 Install / update for selected parts is possible too.
 
 *    `rake install:vim`
-*    `rake update:vim` 
+*    `rake update:vim`
+
+
+Installing dotfiles will add minimal set that works onall *NIX systems. To
+add specific extensions for each OS, use `patch`. Eg, for OpenBSD - `rake
+patch:openbsd`.

@@ -139,11 +139,15 @@ namespace :update do
     end
   end
 
-  # Update oh-my-zsh
-  task :zsh do
-    # TODO
-  end
-
   # update all
   task :all => [:git, :vim]
+end
+
+
+namespace :patch do
+
+  # Add OpenBSD specific files
+  task :openbsd do
+    sym("Tmux/openbsd.tmux.conf", "~/.tmux.conf.local")
+  end
 end
