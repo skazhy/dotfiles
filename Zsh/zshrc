@@ -38,3 +38,5 @@ expand() {
   BASEURI="http://github.com/$(git config --get remote.origin.url | awk -F "." '{print $(NF-1)}' | cut -c 5-)/commit/"
   [ "$#" -eq "0" ] && echo $BASEURI`git rev-parse HEAD` || echo $BASEURI`git rev-parse $1`
 }
+
+alias getshitdone="sudo $DOTFILES_DIR/Zsh/get-shit-done/gsd.sh $DOTFILES_DIR "
