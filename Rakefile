@@ -7,6 +7,9 @@ require 'json'
 resources = JSON.load(File.read("resources.json"))
 
 def fetch(uri, dest)
+  full_dest = File.expand_path(dest)
+  FileUtils.mkpath File.dirname(full_dest)
+
   uri = URI.parse(uri)
   resp = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
     request = Net::HTTP::Get.new uri.request_uri
