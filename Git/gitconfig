@@ -5,7 +5,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore.global
-    pager = "less -x5,9"
+    pager = "cat"
 
 [color]
     ui = true
@@ -20,6 +20,7 @@
     au = add -u
     ap = add -p
     st = status --ignore-submodules=dirty
+    d = diff
     ds = diff --staged
 
 [sendemail]
