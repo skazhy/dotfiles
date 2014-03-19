@@ -16,3 +16,11 @@ local_settings.py
 
 # Virtualenv
 env/
+
+# SBT
+.cache/
+target/
+
+# IntelliJ
+.idea/
+*.iml
