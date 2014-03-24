@@ -17,7 +17,7 @@ mkvirtualenv() {
 }
 
 activate() {
-  source $(git rev-parse --show-toplevel)/env/bin/activate
+  [[ -s "env/bin/activate" ]] && source env/bin/activate || source $(git rev-parse --show-toplevel)/env/bin/activate
 }
 
 procgrep() {
