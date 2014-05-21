@@ -45,8 +45,16 @@ expand() {
 }
 
 alias getshitdone="sudo $DOTFILES_DIR/Zsh/get-shit-done/gsd.sh $DOTFILES_DIR "
+alias act="activate"
 
 source $DOTFILES_DIR/Zsh/aliases.sh
 
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
+
+# History
+setopt hist_ignore_all_dups
+export SAVEHIST=2000
+export HISTFILE="$HOME/.history"
+
+export GATLING_HOME="$HOME/bin/gatling-src/"
