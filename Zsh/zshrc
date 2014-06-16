@@ -27,7 +27,7 @@ procgrep() {
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
 plugins=(rvm django fabric)
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin
 
 # RVM init
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -46,6 +46,8 @@ expand() {
 
 alias getshitdone="sudo $DOTFILES_DIR/Zsh/get-shit-done/gsd.sh $DOTFILES_DIR "
 alias act="activate"
+alias catl="cat -n" # cat with line numbers
+alias rmswap="rm -rf ~/.vim/swapfiles/*"
 
 source $DOTFILES_DIR/Zsh/aliases.sh
 

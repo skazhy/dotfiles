@@ -24,6 +24,7 @@
     ds = diff --staged
     dss = diff --staged --stat
     gr = grep -n
+    sub = submodule
 
 [sendemail]
     smtpencryption = tls
