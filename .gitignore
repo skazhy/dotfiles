@@ -2,6 +2,7 @@ Fonts/*.ttf
 Vim/colors/*.vim
 Vim/autoload/*.vim
 Vim/.netrwhist
+Vim/swapfiles
 Vim/Vim
 Vim/syntax/*.vim
 Openbox/Openbox

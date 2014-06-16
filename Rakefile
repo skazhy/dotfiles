@@ -100,6 +100,7 @@ namespace :install do
   task :vim => "update:vim" do
     sym("Vim/vimrc", "~/.vimrc")
     sym("Vim", "~/.vim")
+    spawner("mkdir ~/.vim/swapfiles/")
   end
 
   # Symlink zshrc

@@ -85,3 +85,7 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P                              " offset
 " NERDTree tweaks
 let NERDTreeIgnore = ['\.pyc$', 'target/']
 let NERDTreeMapHelp = '<f1>'
+
+
+" Swapfiles
+set directory=$HOME/.vim/swapfiles//
