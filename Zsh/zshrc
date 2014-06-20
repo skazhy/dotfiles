@@ -16,7 +16,7 @@ mkvirtualenv() {
   source env/bin/activate
 }
 
-activate() {
+act() {
   [[ -s "env/bin/activate" ]] && source env/bin/activate || source $(git rev-parse --show-toplevel)/env/bin/activate
 }
 
@@ -25,7 +25,6 @@ procgrep() {
 }
 
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
-plugins=(rvm django fabric)
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin
 
@@ -45,7 +44,6 @@ expand() {
 }
 
 alias getshitdone="sudo $DOTFILES_DIR/Zsh/get-shit-done/gsd.sh $DOTFILES_DIR "
-alias act="activate"
 alias catl="cat -n" # cat with line numbers
 alias rmswap="rm -rf ~/.vim/swapfiles/*"
 
@@ -58,5 +56,3 @@ export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
 setopt hist_ignore_all_dups
 export SAVEHIST=2000
 export HISTFILE="$HOME/.history"
-
-export GATLING_HOME="$HOME/bin/gatling-src/"
