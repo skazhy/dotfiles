@@ -3,6 +3,7 @@ Vim/colors/*.vim
 Vim/autoload/*.vim
 Vim/.netrwhist
 Vim/swapfiles
+Vim/local.vim
 Vim/Vim
 Vim/syntax/*.vim
 Openbox/Openbox

@@ -98,6 +98,7 @@ namespace :install do
 
   # Get all plugins and symlink Vim config
   task :vim => "update:vim" do
+    spawner("touch Vim/local.vim")
     sym("Vim/vimrc", "~/.vimrc")
     sym("Vim", "~/.vim")
     spawner("mkdir ~/.vim/swapfiles/")
