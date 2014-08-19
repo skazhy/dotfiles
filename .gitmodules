@@ -22,3 +22,6 @@
 [submodule "Vim/plugins/clojure"]
 	path = Vim/plugins/clojure
 	url = git@github.com:guns/vim-clojure-static.git
+[submodule "Vim/plugins/fireplace"]
+	path = Vim/plugins/fireplace
+	url = git://github.com/tpope/vim-fireplace.git
