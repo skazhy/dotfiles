@@ -33,7 +33,7 @@ procgrep() {
 
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin
 
 # RVM init
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -58,9 +58,29 @@ source $DOTFILES_DIR/Zsh/aliases.sh
 
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8"
-export GRAILS_OPTS="-Xmx4G -Xms256m -XX:MaxPermSize=256m"
 
 # History
 setopt hist_ignore_all_dups
 export SAVEHIST=2000
 export HISTFILE="$HOME/.history"
+
+fpath=(~/.zsh/autocomplete $fpath)
+echo $fpath
+
+
+function setjdk() {
+  function removeFromPath() {
+    export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+  }
+
+  if [ $# -ne 0 ]; then
+   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+   if [ -n "${JAVA_HOME+x}" ]; then
+    removeFromPath $JAVA_HOME/bin
+   fi
+   export JAVA_HOME=`/usr/libexec/java_home -v $@`
+   export PATH=$JAVA_HOME/bin:$PATH
+  fi
+}
+
+setjdk 1.8

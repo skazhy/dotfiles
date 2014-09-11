@@ -106,7 +106,8 @@ namespace :install do
 
   # Symlink zshrc
   task :zsh do
-    # TODO: install oh-my-zsh & extra plugins
+    spawner("mkdir -p ~/.zsh")
+    sym("Zsh/autocomplete ~/.zsh/autocomplete")
     sym("Zsh/zshrc", "~/.zshrc")
   end
 
