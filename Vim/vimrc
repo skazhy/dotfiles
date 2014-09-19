@@ -52,6 +52,7 @@ set guioptions-=T       " Remove toolbar
 set guioptions-=m       " Remove menubar
 set background=dark
 set nohlsearch
+set cursorline
 colorscheme solarized
 
 " Use arrow keys for buffer manipulation

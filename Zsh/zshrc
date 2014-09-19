@@ -18,7 +18,7 @@ export PS1='%c $(git_prompt_string)%% '
 grin() { grep -RIn "$*" ./*; }
 frin()  { find ./* -name "*$**"; }
 
-mkvirtualenv() {
+mkv() {
   virtualenv --distribute env &> /dev/null
   source env/bin/activate
 }
@@ -65,7 +65,7 @@ export SAVEHIST=2000
 export HISTFILE="$HOME/.history"
 
 fpath=(~/.zsh/autocomplete $fpath)
-echo $fpath
+# echo $fpath
 
 
 function setjdk() {
