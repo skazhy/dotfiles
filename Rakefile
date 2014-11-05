@@ -107,7 +107,7 @@ namespace :install do
   # Symlink zshrc
   task :zsh do
     spawner("mkdir -p ~/.zsh")
-    sym("Zsh/autocomplete ~/.zsh/autocomplete")
+    sym("Zsh/autocomplete", "~/.zsh/autocomplete")
     sym("Zsh/zshrc", "~/.zshrc")
   end
 
