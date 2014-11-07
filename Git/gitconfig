@@ -37,3 +37,6 @@
 
 [grep]
     linenumber = true
+
+[web]
+  browser = open
