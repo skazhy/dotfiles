@@ -35,9 +35,6 @@ ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
 
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin
 
-# RVM init
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Don't mess with window title
 DISABLE_AUTO_TITLE=true
 
