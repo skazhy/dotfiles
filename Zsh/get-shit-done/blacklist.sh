@@ -17,4 +17,5 @@ GSD_BLACKLIST=(
   'tvnet.lv'
   'twitter.com'
   'youtube.com'
+  'lobste.rs'
 )
