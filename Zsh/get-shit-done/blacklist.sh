@@ -18,4 +18,7 @@ GSD_BLACKLIST=(
   'twitter.com'
   'youtube.com'
   'lobste.rs'
+  'goodreads.com'
+  'foursquare.com'
+  'last.fm'
 )
