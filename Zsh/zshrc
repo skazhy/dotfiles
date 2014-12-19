@@ -11,8 +11,14 @@ autoload -U colors && colors # Enable colors in prompt
 # The actual directory of the dotfiles repo
 export DOTFILES_DIR=$(dirname $(dirname `readlink ~/.zshrc`))
 
+# Prompt
+# If at $HOME, echo nothing, if at /foo/bar/baz echo "bar/baz "
+relative_path() {
+  [[ $HOME == $(print -P %d) ]] && echo "" || echo "$(print -P %2~) "
+}
+
 source $DOTFILES_DIR/Zsh/git-prompt.sh
-export PS1='%c $(git_prompt_string)%% '
+export PS1='$(relative_path)% $(git_prompt_string)%% '
 
 
 grin() { grep -RIn "$*" ./*; }
