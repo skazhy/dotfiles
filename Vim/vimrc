@@ -55,6 +55,11 @@ set nohlsearch
 set cursorline
 colorscheme solarized
 
+
+" Disable bell
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 " Use arrow keys for buffer manipulation
 noremap <Left>  :bprevious<cr>
 noremap <Right> :bnext<cr>
@@ -69,12 +74,12 @@ inoremap <Down>  <esc>:buffers<cr>
 " Preserve indenting when starting a line with #
 inoremap # X<BS>#
 
-set hidden " Allows movement between modified buffers
+set hidden   " Allows movement between modified buffers
+set autoread
 
 " Statusline
 set laststatus=2         " omnipresent statusline
 set statusline=          " clear statusline on vimrc reload
-set statusline+=%-3.3n\  " bufer number
 set statusline+=%f\      " file name
 set statusline+=%m%r%w   " flags (modified, readonly, preview)
 
