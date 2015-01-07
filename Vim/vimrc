@@ -63,7 +63,7 @@ autocmd GUIEnter * set visualbell t_vb=
 " Use arrow keys for buffer manipulation
 noremap <Left>  :bprevious<cr>
 noremap <Right> :bnext<cr>
-noremap <Up>    :bdelete<cr>
+noremap <Up>    :b#<bar>bdelete#<cr>
 noremap <Down>  :buffers<cr>
 
 inoremap <Left>  <esc>:bprevious<cr>

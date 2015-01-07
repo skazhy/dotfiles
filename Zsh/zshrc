@@ -55,7 +55,7 @@ expand() {
 
 alias getshitdone="sudo $DOTFILES_DIR/Zsh/get-shit-done/gsd.sh $DOTFILES_DIR "
 alias catl="cat -n" # cat with line numbers
-alias rmswap="rm -f ~/.vim/swapfiles/*"
+alias rmswap="rm -f ~/.vim/swapfiles/* || exit 0"
 
 source $DOTFILES_DIR/Zsh/aliases.sh
 
