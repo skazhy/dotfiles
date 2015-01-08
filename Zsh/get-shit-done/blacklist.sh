@@ -5,7 +5,7 @@ GSD_BLACKLIST=(
   'discogs.com'
   'facebook.com'
   'instagram.com'
-  'ir.lv'
+  'irir.lv'
   'klab.lv'
   'linkedin.com'
   'meetup.com'
@@ -20,5 +20,4 @@ GSD_BLACKLIST=(
   'lobste.rs'
   'goodreads.com'
   'foursquare.com'
-  'last.fm'
 )
