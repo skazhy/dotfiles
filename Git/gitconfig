@@ -15,7 +15,7 @@
     cp = checkout -p
     ci = commit
     ca = commit --amend
-    wtf = reset --hard HEAD
+    wtf = reset --hard
     loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s %Cred%d%Creset' --graph
     au = add -u
     ap = add -p
@@ -25,6 +25,7 @@
     dss = diff --staged --stat
     gr = grep -n
     sub = submodule
+    shs = show head --stat
 
 [sendemail]
     smtpencryption = tls
