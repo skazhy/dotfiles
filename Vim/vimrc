@@ -4,8 +4,8 @@
 " in ftplugin and ftdetect folders
 
 " Start pathogen & load plugins
-call pathogen#infect('plugins/{}')
-call pathogen#helptags()
+exec pathogen#infect('plugins/{}')
+exec pathogen#helptags()
 
 filetype plugin on
 
@@ -54,6 +54,11 @@ set background=dark
 set nohlsearch
 set cursorline
 colorscheme solarized
+
+" Solarized Light looks ugly in terminal
+if has("gui_running")
+  set background=light
+end
 
 
 " Disable bell
