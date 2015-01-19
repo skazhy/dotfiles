@@ -2,14 +2,6 @@
   "Vim": {
     "colors": [
       {
-        "name": "mayansmoke.vim",
-        "uri": "https://raw.githubusercontent.com/vim-scripts/mayansmoke/master/colors/mayansmoke.vim"
-      },
-      {
-        "name": "moria.vim",
-        "uri": "https://raw.githubusercontent.com/vim-scripts/moria/master/colors/moria.vim"
-      },
-      {
         "name": "solarized.vim",
         "uri": "https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim"
       }
@@ -17,7 +9,7 @@
     "syntax": [
       {
         "name": "scala.vim",
-        "uri":  "https://raw.githubusercontent.com/scala/scala-dist/master/tool-support/src/vim/syntax/scala.vim"
+        "uri": "https://raw.githubusercontent.com/scala/scala-tool-support/master/tool-support/vim/syntax/scala.vim"
       }
     ],
     "autoload": [
