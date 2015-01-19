@@ -65,6 +65,12 @@ namespace :install do
     sym("Bash/bashrc", "~/.bashrc")
   end
 
+  # Symlink Clojure and Leinigen config
+  task :clojure do
+    spawner("mkdir -p ~/.lein")
+    sym("Clojure/profiles.clj", "~/.lein/profiles.clj")
+  end
+
   # Get all fonts
   task :fonts do
     resources["Fonts"].each do |font|
