@@ -117,7 +117,7 @@ namespace :install do
     sym("Zsh/zshrc", "~/.zshrc")
   end
 
-  task :all => [:bash, :fonts, :git, :ruby, :scala, :vim, :tmux, :zsh, "update:all"]
+  task :all => [:bash, :clojure, :fonts, :git, :ruby, :scala, :vim, :tmux, :zsh, "update:all"]
 
   # Symlink OpenBox config
   task :openbox do
