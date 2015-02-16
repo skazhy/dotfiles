@@ -25,7 +25,9 @@
     dss = diff --staged --stat
     gr = grep -n
     sub = submodule
+    sh = show
     shs = show head --stat
+    rb = rebase
 
 [sendemail]
     smtpencryption = tls

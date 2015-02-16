@@ -87,3 +87,6 @@ function setjdk() {
 }
 
 setjdk 1.8
+
+
+alias curlj="curl -H 'Content-Type: application/json'"
