@@ -17,3 +17,7 @@ Install / update for selected parts is possible too.
 Installing dotfiles will add minimal set that works onall *NIX systems. To
 add specific extensions for each OS, use `patch`. Eg, for OpenBSD - `rake
 patch:openbsd`.
+
+___
+
+2011 - &infin; [skazhy](http://karlis.me)
