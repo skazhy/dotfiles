@@ -157,9 +157,11 @@ end
 
 
 namespace :patch do
-
-  # Add OpenBSD specific files
   task :openbsd do
     sym("Tmux/openbsd.tmux.conf", "~/.tmux.conf.local")
+  end
+
+  task :osx do
+    sym("Zsh/osx.sh", "~/.zsh/platform.sh")
   end
 end

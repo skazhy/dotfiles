@@ -9,3 +9,4 @@ Vim/syntax/*.vim
 Openbox/Openbox
 Fonts/Fonts
 Backup/
+Zsh/platform.sh
