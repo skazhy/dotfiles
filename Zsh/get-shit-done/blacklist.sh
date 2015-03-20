@@ -12,7 +12,6 @@ GSD_BLACKLIST=(
   'news.ycombinator.com'
   'reddit.com'
   'slashdot.org'
-  'statigr.am'
   'theverge.com'
   'tvnet.lv'
   'twitter.com'
@@ -20,4 +19,5 @@ GSD_BLACKLIST=(
   'lobste.rs'
   'goodreads.com'
   'foursquare.com'
+  'amazon.com'
 )
