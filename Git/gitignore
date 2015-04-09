@@ -24,3 +24,6 @@ target/
 # IntelliJ
 .idea/
 *.iml
+
+# JUnit
+report.xml
