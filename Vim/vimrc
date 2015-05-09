@@ -55,10 +55,7 @@ set nohlsearch
 set cursorline
 colorscheme solarized
 
-" Solarized Light looks ugly in terminal
-if has("gui_running")
-  set background=light
-end
+set background=dark
 
 
 " Disable bell
@@ -99,6 +96,5 @@ let NERDTreeMapHelp = '<f1>'
 
 " Swapfiles
 set directory=$HOME/.vim/swapfiles//
-
 
 source $HOME/.vim/local.vim
