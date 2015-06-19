@@ -10,6 +10,9 @@
       {
         "name": "scala.vim",
         "uri": "https://raw.githubusercontent.com/scala/scala-tool-support/master/tool-support/vim/syntax/scala.vim"
+      }, {
+        "name": "purescript.vim",
+        "uri": "https://raw.githubusercontent.com/michaelficarra/purescript-vim/master/syntax/purescript.vim"
       }
     ],
     "autoload": [
