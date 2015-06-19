@@ -16,3 +16,5 @@ function setjdk() {
 }
 
 setjdk 1.8
+
+export PATH=$PATH:~/Library/Haskell/bin

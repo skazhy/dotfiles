@@ -71,12 +71,6 @@ fpath=(~/.zsh/autocomplete $fpath)
 
 alias curlj="curl -H 'Content-Type: application/json'"
 
-# Load platform-specific stuff, if any
-[[ -s "$HOME/.zsh/platform.sh" ]] && source "$HOME/.zsh/platform.sh"
-
-
-# Diff ++
-
 # Filter lines only in the first file
 diff-this() {
   diff $1 $2 | grep "<" | awk '{print $2}'
@@ -86,3 +80,6 @@ diff-this() {
 diff-that() {
   diff $1 $2 | grep ">" | awk '{print $2}'
 }
+
+# Load platform-specific stuff, if any
+[[ -s "$HOME/.zsh/platform.sh" ]] && source "$HOME/.zsh/platform.sh"
