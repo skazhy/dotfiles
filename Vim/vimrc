@@ -31,7 +31,7 @@ set history=50      " Remember 50 last commands / patterns
 set scrolloff=2     " Keeping 2 line margin above/below cursor
 set number          " Start each line with line number
 set ignorecase smartcase
-set wildignore=*.pyc,*.pdf,*.iml
+set wildignore=*.pyc,*.pdf,*.iml,project/,target/
 
 if has("wildignorecase")  " Ignore filename case
   set wildignorecase      " where it is possible
@@ -98,3 +98,11 @@ let NERDTreeMapHelp = '<f1>'
 set directory=$HOME/.vim/swapfiles//
 
 source $HOME/.vim/local.vim
+
+" Use relative numbers in focused normal mode buffers
+
+autocmd FocusLost * :set number
+autocmd InsertEnter * :set number
+
+autocmd FocusGained * :set relativenumber
+autocmd InsertLeave * :set relativenumber
