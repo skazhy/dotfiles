@@ -1,4 +1,3 @@
-tags
 .DS_Store
 
 # Vim swap files
@@ -27,3 +26,9 @@ target/
 
 # JUnit
 report.xml
+
+# Lein & Clojure
+.lein-*
+.nrepl-port
+pom.xml
+pom.xml.asc
