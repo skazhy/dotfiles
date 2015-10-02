@@ -28,7 +28,7 @@ au BufRead,BufNewFile *
 au BufWritePre * :%s/\s\+$//e
 
 set history=50      " Remember 50 last commands / patterns
-set scrolloff=2     " Keeping 2 line margin above/below cursor
+set scrolloff=4     " Keeping 4 line margin above/below cursor
 set number          " Start each line with line number
 set ignorecase smartcase
 set wildignore=*.pyc,*.pdf,*.iml,project/,target/
@@ -41,6 +41,8 @@ if has("gui_running")
   set incsearch
   set wildmenu
 end
+
+set gdefault  " Invert `g` flag behavior for search/replace.
 
 " Disable ex mode
 map Q <Nop>
