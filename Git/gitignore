@@ -32,3 +32,6 @@ report.xml
 .nrepl-port
 pom.xml
 pom.xml.asc
+
+elm-stuff
+dist
