@@ -70,6 +70,7 @@ export HISTFILE="$HOME/.history"
 fpath=(~/.zsh/autocomplete $fpath)
 
 alias curlj="curl -H 'Content-Type: application/json'"
+alias grozinsh="~/Sandbox/grozinsh/lein repl"
 
 # Filter lines only in the first file
 diff-this() {

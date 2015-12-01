@@ -107,7 +107,7 @@ namespace :install do
     spawner("touch Vim/local.vim")
     sym("Vim/vimrc", "~/.vimrc")
     sym("Vim", "~/.vim")
-    spawner("mkdir ~/.vim/swapfiles/")
+    spawner("mkdir -p ~/.vim/swapfiles/")
   end
 
   # Symlink zshrc
