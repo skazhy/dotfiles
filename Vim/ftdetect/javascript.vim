@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.json set filetype=javascript
+au BufRead,BufNewFile *.json,*.es6 set filetype=javascript
