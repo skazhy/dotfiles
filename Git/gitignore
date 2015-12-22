@@ -36,3 +36,6 @@ pom.xml.asc
 elm-stuff
 dist
 node_modules
+
+*.exe
+*.zip
