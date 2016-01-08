@@ -15,6 +15,7 @@
     cp = checkout -p
     ci = commit
     ca = commit --amend
+    cas = commit --amend --no-edit
     wtf = reset --hard
     loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s %Cred%d%Creset' --graph
     au = add -u
