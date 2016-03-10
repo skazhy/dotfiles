@@ -32,6 +32,7 @@ report.xml
 .nrepl-port
 pom.xml
 pom.xml.asc
+checkouts/
 
 elm-stuff
 dist

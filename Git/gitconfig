@@ -29,6 +29,7 @@
     sh = show
     shs = show head --stat
     rb = rebase
+    rbc = rebase --continue
 
 [sendemail]
     smtpencryption = tls
