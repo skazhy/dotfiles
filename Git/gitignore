@@ -34,9 +34,12 @@ pom.xml
 pom.xml.asc
 checkouts/
 
+# Node, psc, Elm
 elm-stuff
 dist
 node_modules
+.psci_modules
+bower_components
 
 *.exe
 *.zip
