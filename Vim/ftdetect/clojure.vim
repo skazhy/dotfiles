@@ -1,5 +1,5 @@
 function! InsertCljNs()
-  let fullPath = expand('%:r')
+  let fullPath = expand('%:p:r')
   if (l:fullPath =~ "test\/")
     let l:rawNs = substitute(l:fullPath, "^.*test[/\\\\]", "", "")
   else
