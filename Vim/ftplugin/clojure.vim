@@ -35,19 +35,15 @@ function! UpsertCljNs()
   endif
 endfunction
 
-function! OpenCljTestOrSource()
-  " Opens tests for a given source or source for given tests
-  " Handles two naming schemes for namespace foo: t-foo and foo-test
 
-  let fullPath = expand('%:t')
-  if (l:fullPath =~ "test\/")
-    let l:newPath = substitute(l:fullPath, "test", "src", "")
-  else
-    let l:newPath = substitute(l:fullPath, "src", "test", "")
+function! MvCljFile(newPath)
+  let curr = expand('%')
+  if (curr == a:newPath)
+    return 0
   endif
-  execute 'b ' . l:newPath
-endfunction
 
-function! DeleteSurroundingForm()
- silent normal ?(ds(dex
+  exe 'sav' fnameescape(a:newPath)
+  call delete(curr)
+  call UpsertCljNs()
 endfunction
+command! -nargs=1 -complete=file -bar MvCljFile call MvCljFile('<args>')
