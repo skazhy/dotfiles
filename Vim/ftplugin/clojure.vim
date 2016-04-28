@@ -45,5 +45,6 @@ function! MvCljFile(newPath)
   exe 'sav' fnameescape(a:newPath)
   call delete(curr)
   call UpsertCljNs()
+  exe 'write'
 endfunction
 command! -nargs=1 -complete=file -bar MvCljFile call MvCljFile('<args>')
