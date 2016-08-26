@@ -20,4 +20,5 @@ GSD_BLACKLIST=(
   'goodreads.com'
   'foursquare.com'
   'amazon.com'
+  'massdrop.com'
 )
