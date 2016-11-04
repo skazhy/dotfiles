@@ -21,7 +21,7 @@ source $DOTFILES_DIR/Zsh/git-prompt.sh
 export PS1='$(relative_path)% $(git_prompt_string)%% '
 
 
-grin() { grep -RIn "$*" ./*; }
+grin() { grep --exclude-dir={.git,target} -RIn "$*" ./*; }
 frin()  { find ./* -name "*$**"; }
 
 mkv() {
