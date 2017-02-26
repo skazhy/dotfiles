@@ -33,6 +33,7 @@ report.xml
 pom.xml
 pom.xml.asc
 checkouts/
+figwheel_server.log
 
 # Node, psc, Elm
 elm-stuff
