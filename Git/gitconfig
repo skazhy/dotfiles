@@ -31,12 +31,7 @@
     shs = show head --stat
     rb = rebase
     rbc = rebase --continue
-
-[sendemail]
-    smtpencryption = tls
-    smtpserver = smtp.gmail.com
-    smtpuser = skazhy@gmail.com
-    smtpserverport = 587
+    rba = rebase --abort
 
 [push]
     default = current
