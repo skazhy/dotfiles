@@ -92,6 +92,12 @@ namespace :install do
     sym("Ruby/gemrc", "~/.gemrc")
   end
 
+  # Symlink Haskell Stack stuff
+  task :haskell do
+    spawner("mkdir -p ~/.stack")
+    sym("Haskell/stack_config.yaml", "~/.stack/config.yaml")
+  end
+
   # Symlink Scala & SBT config
   task :scala do
     sym("Scala/sbtconfig", "~/.sbtconfig")
@@ -117,7 +123,7 @@ namespace :install do
     sym("Zsh/zshrc", "~/.zshrc")
   end
 
-  task :all => [:bash, :clojure, :fonts, :git, :ruby, :scala, :vim, :tmux, :zsh, "update:all"]
+  task :all => [:bash, :clojure, :fonts, :git, :ruby, :haskell, :scala, :vim, :tmux, :zsh, "update:all"]
 
   # Symlink OpenBox config
   task :openbox do
