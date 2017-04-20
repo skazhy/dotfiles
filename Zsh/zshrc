@@ -53,6 +53,11 @@ expand() {
   [ "$#" -eq "0" ] && echo $BASEURI`git rev-parse HEAD` || echo $BASEURI`git rev-parse $1`
 }
 
+# Remove an IP from known_hosts file.
+forget-host() {
+  [ "$#" -eq "1" ] && sed -i '' "/^$1 ecdsa/d" ~/.ssh/known_hosts
+}
+
 alias getshitdone="sudo $DOTFILES_DIR/Zsh/get-shit-done/gsd.sh $DOTFILES_DIR "
 alias catl="cat -n" # cat with line numbers
 alias rmswap="yes | rm -f ~/.vim/swapfiles/*.sw*"
