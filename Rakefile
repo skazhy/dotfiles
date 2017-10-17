@@ -6,11 +6,12 @@ require 'json'
 
 resources = JSON.load(File.read("resources.json"))
 
-def fetch(uri, dest)
+def fetch(resource, dest)
+  puts "Downloading #{resource["name"]}..."
   full_dest = File.expand_path(dest)
   FileUtils.mkpath File.dirname(full_dest)
 
-  uri = URI.parse(uri)
+  uri = URI.parse(resource["uri"])
   resp = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
     request = Net::HTTP::Get.new uri.request_uri
     http.request request
@@ -74,9 +75,7 @@ namespace :install do
   # Get all fonts
   task :fonts do
     resources["Fonts"].each do |font|
-      dest = "Fonts/#{font["name"]}"
-      puts "Downloading #{font["name"]}..."
-      fetch font["uri"], dest
+      fetch font, "Fonts/#{font["name"]}"
     end
     sym("Fonts", "~/.fonts")
   end
@@ -117,7 +116,7 @@ namespace :install do
   end
 
   # Symlink zshrc
-  task :zsh do
+  task :zsh => "update:zsh" do
     spawner("mkdir -p ~/.zsh")
     sym("Zsh/autocomplete", "~/.zsh/autocomplete")
     sym("Zsh/zshrc", "~/.zshrc")
@@ -150,11 +149,18 @@ namespace :update do
   task :vim => :git do
     resources["Vim"].each do |res_name, res_list|
       res_list.each do |res|
-        dest = "Vim/#{res_name}/#{res["name"]}"
-        puts "Downloading #{res["name"]}..."
-        fetch res["uri"], dest
+        fetch res, "Vim/#{res_name}/#{res["name"]}"
       end
     end
+  end
+
+  # Downlaod zhs resources
+  task :zsh do
+    resources["Zsh"]["autocomplete"].each do |ac|
+      fetch ac, "Zsh/autocomplete/_#{ac["name"]}"
+    end
+    # rebuild the autocomplete cache
+    spawner("rm -f ~/.zcompdump; compinit")
   end
 
   # update all
