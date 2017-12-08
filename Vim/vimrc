@@ -40,6 +40,7 @@ end
 if has("gui_running")
   set incsearch
   set wildmenu
+  set guifont=Inconsolata:h13
 end
 
 set gdefault  " Invert `g` flag behavior for search/replace.
