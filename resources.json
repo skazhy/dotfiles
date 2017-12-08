@@ -31,7 +31,7 @@
   "Zsh": {
     "autocomplete": [
       {
-        "name": "lein.zsh",
+        "name": "_lein",
         "uri": "https://raw.githubusercontent.com/technomancy/leiningen/master/zsh_completion.zsh"
       }
     ]
