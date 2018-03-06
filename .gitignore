@@ -6,6 +6,7 @@ Vim/swapfiles
 Vim/local.vim
 Vim/Vim
 Vim/syntax/*.vim
+Vim/indent/*.vim
 Openbox/Openbox
 Fonts/Fonts
 Backup/
