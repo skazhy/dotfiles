@@ -13,6 +13,9 @@
       }, {
         "name": "purescript.vim",
         "uri": "https://raw.githubusercontent.com/michaelficarra/purescript-vim/master/syntax/purescript.vim"
+      }, {
+        "name": "org.vim",
+        "uri": "https://raw.githubusercontent.com/jceb/vim-orgmode/master/syntax/org.vim"
       }
     ],
     "autoload": [
