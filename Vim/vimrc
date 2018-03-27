@@ -15,6 +15,7 @@ set tabstop=4     " No. of spaces that tab couns for
 set shiftwidth=4  " No. of spaces of each step in autoindent
 set expandtab     " Tab inserts spaces
 set autoindent    " Copy indent from previous line
+set smartindent   " Smart indenting when starting newline
 
 " Don't create swap files in Dropbox
 au BufRead,BufNewFile *
