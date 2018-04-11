@@ -1,7 +1,5 @@
 setlocal iskeyword+=?,*,!,+,/,=,<,>,.,:
 setlocal colorcolumn=80
-setlocal shiftwidth=2
-setlocal tabstop=2
 
 function! UpsertCljNs()
   " Insert a namespace form in the first line of new files,
