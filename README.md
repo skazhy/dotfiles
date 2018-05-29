@@ -18,6 +18,14 @@ Installing dotfiles will add minimal set that works onall *NIX systems. To
 add specific extensions for each OS, use `patch`. Eg, for OpenBSD - `rake
 patch:openbsd`.
 
+## Requirements
+
+Currently running on time-tested software:
+
+* tmux 2.7
+* vim 7.4
+* zsh 5.2
+
 ___
 
 2011 - &infin; [skazhy](http://karlis.me)
