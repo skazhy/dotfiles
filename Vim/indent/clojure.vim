@@ -3,4 +3,4 @@ setlocal shiftwidth=2
 setlocal tabstop=2
 
 let g:clojure_align_multiline_strings = 1
-let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', 'go-try$', 'go-try-timeit']
+let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^go-try', '^are$']
