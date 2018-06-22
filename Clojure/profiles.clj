@@ -1,6 +1,5 @@
 {:user {:plugins [[cider/cider-nrepl "0.15.1"]
                   [lein-bikeshed "0.2.0"]
-                  [com.jakemccrary/lein-test-refresh "0.17.0"]
                   [lein-kibit "0.0.8"]
                   [lein-try "0.4.3"]
                   [codox "0.6.4"]
