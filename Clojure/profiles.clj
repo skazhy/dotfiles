@@ -4,7 +4,7 @@
                   [lein-try "0.4.3"]
                   [codox "0.6.4"]
                   [venantius/yagni "0.1.4"]
-                  [jonase/eastwood "0.2.3"]]
+                  [jonase/eastwood "0.2.5"]]
           :aliases {"lint" ["do" "eastwood," "bikeshed"]}}
  :auth {:repository-auth {#"https://clojars.org/repo"
                          {:username "karlis"
