@@ -173,7 +173,7 @@ namespace :patch do
     sym("Tmux/openbsd.tmux.conf", "~/.tmux.conf.local")
   end
 
-  task :osx do
-    sym("Zsh/osx.sh", "~/.zsh/platform.sh")
+  task :macos do
+    sym("Zsh/macos.sh", "~/.zsh/platform.sh")
   end
 end

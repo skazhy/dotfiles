@@ -12,9 +12,9 @@ Install / update for selected parts is possible, too.
 *    `rake install:vim`
 *    `rake update:vim`
 
-Installing dotfiles will add minimal set that works onall *NIX systems. To
-add specific extensions for each OS, use `patch`. Eg, for OpenBSD - `rake
-patch:openbsd`.
+Installing dotfiles will add minimal set that works on all *NIX systems. To
+add specific extensions for each OS, use `patch`. Currently there are specific
+extensions for `macos` and `openbsd`. (ie, `rake patch:macos`).
 
 ## Requirements
 
