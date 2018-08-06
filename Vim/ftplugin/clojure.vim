@@ -22,14 +22,20 @@ function! UpsertCljNs()
     endif
   endif
 
-  let nsName = substitute(substitute(l:rawNs, "\/", ".", "g"), "_", "-", "g")
-
-  if match(getline(1), "ns ") > 0
-      silent execute '1s/ns\s\%[\w\.]\+/ns ' . nsName . '/e'
+  if expand("%:t") == "project.clj"
+    if match(getline(1), "defproject ") < 1
+      let projectForm = "(defproject " . expand("%:p:h:t") . ")"
+      put =projectForm
+    endif
   else
-    let nsForm = "(ns " . nsName . ")"
-    put =nsForm
-    silent normal kJ3o
+    let nsName = substitute(substitute(l:rawNs, "\/", ".", "g"), "_", "-", "g")
+    if match(getline(1), "ns ") > 0
+      silent execute '1s/ns\s\%[\w\.-]\+/ns ' . nsName . '/e'
+    else
+      let nsForm = "(ns " . nsName . ")"
+      put =nsForm
+      silent normal kJ3o
+    endif
   endif
 endfunction
 
