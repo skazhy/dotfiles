@@ -25,7 +25,7 @@ grin() { grep --exclude-dir={.git,target,checkouts} -RIn "$*" ./*; }
 frin()  { find ./* -name "*$**"; }
 
 mkv() {
-  virtualenv --distribute env &> /dev/null
+  virtualenv --python=python3.6 env &> /dev/null
   source env/bin/activate
 }
 
