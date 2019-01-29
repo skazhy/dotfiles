@@ -16,6 +16,7 @@
     ci = commit
     ca = commit --amend
     cas = commit --amend --no-edit
+    cif = commit --fixup
     wtf = reset --hard
     loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s %Cred%d%Creset' --graph
     au = add -u
@@ -32,6 +33,9 @@
     rb = rebase
     rbc = rebase --continue
     rba = rebase --abort
+
+[rebase]
+    autosquash = true
 
 [push]
     default = current
