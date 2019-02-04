@@ -18,6 +18,7 @@
     cas = commit --amend --no-edit
     cif = commit --fixup
     wtf = reset --hard
+    oops = reset HEAD@{1}
     loc = log --pretty=format:'%Cblue%h%Creset %ar by %Cgreen%an%Creset - %s %Cred%d%Creset' --graph
     au = add -u
     ap = add -p
