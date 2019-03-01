@@ -16,6 +16,7 @@
     ci = commit
     ca = commit --amend
     cas = commit --amend --no-edit
+    caf = commit --amend --fixup
     cif = commit --fixup
     wtf = reset --hard
     oops = reset HEAD@{1}
@@ -46,3 +47,5 @@
 
 [web]
     browser = open
+
+# vim: set sw=8,ts=8
