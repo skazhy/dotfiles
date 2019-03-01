@@ -36,13 +36,5 @@
         "name": "mensch.ttf",
         "uri": "http://robey.lag.net/downloads/mensch.ttf"
       }
-  ],
-  "Zsh": {
-    "autocomplete": [
-      {
-        "name": "_lein",
-        "uri": "https://raw.githubusercontent.com/technomancy/leiningen/master/zsh_completion.zsh"
-      }
-    ]
-  }
+  ]
 }
