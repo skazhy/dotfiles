@@ -35,6 +35,7 @@
     rb = rebase
     rbc = rebase --continue
     rba = rebase --abort
+    rbu = -c core.editor='vim -c :wq' rebase -i
 
 [rebase]
     autosquash = true
