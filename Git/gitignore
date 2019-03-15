@@ -34,6 +34,7 @@ pom.xml
 pom.xml.asc
 checkouts/
 figwheel_server.log
+.eastwood
 
 # Node, psc, Elm
 elm-stuff
