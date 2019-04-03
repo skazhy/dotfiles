@@ -27,8 +27,8 @@
     d = diff
     ds = diff --staged
     dss = diff --staged --stat
-    gr = grep -n -I
-    gri = grep -n -i -I
+    gr = grep -I
+    gri = grep -i -I
     sub = submodule
     sh = show
     shs = show head --stat
@@ -36,6 +36,9 @@
     rbc = rebase --continue
     rba = rebase --abort
     rbu = -c core.editor='vim -c :wq' rebase -i
+
+[grep]
+    lineNumber = true
 
 [rebase]
     autosquash = true
