@@ -27,8 +27,8 @@
     d = diff
     ds = diff --staged
     dss = diff --staged --stat
-    gr = grep -n
-    gri = grep -n -i
+    gr = grep -n -I
+    gri = grep -n -i -I
     sub = submodule
     sh = show
     shs = show head --stat
