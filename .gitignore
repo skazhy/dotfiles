@@ -7,6 +7,7 @@ Vim/local.vim
 Vim/Vim
 Vim/syntax/*.vim
 Vim/indent/*.vim
+Vim/undodir
 Openbox/Openbox
 Fonts/Fonts
 Backup/
