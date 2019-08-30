@@ -45,3 +45,5 @@ bower_components
 
 *.exe
 *.zip
+
+.env
