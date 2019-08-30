@@ -38,9 +38,12 @@ if has("wildignorecase")  " Ignore filename case
   set wildignorecase      " where it is possible
 end
 
+if has("wildmenu")
+  set wildmenu
+end
+
 if has("gui_running")
   set incsearch
-  set wildmenu
   set guifont=Inconsolata:h13
 end
 
