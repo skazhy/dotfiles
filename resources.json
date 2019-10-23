@@ -16,6 +16,9 @@
       }, {
         "name": "org.vim",
         "uri": "https://raw.githubusercontent.com/jceb/vim-orgmode/master/syntax/org.vim"
+      }, {
+        "name": "stylus.vim",
+        "uri": "https://raw.githubusercontent.com/wavded/vim-stylus/master/syntax/stylus.vim"
       }
     ],
     "autoload": [
