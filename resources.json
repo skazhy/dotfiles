@@ -31,6 +31,9 @@
       {
         "name": "python.vim",
         "uri": "https://www.vim.org/scripts/download_script.php?src_id=4316"
+      }, {
+        "name": "rust.vim",
+        "uri": "https://raw.githubusercontent.com/rust-lang/rust.vim/master/indent/rust.vim"
       }
     ]
   },
