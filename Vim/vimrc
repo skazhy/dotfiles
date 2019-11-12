@@ -25,6 +25,10 @@ au BufRead,BufNewFile *
 \ set swapfile |
 \ endif
 
+" Do nto create fails starting with :'s
+au BufWritePre [:]*
+\ try | echoerr 'Illegal file name: ' . expand('<afile>') | endtry
+
 " Remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 
