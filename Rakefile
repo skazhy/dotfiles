@@ -113,6 +113,7 @@ namespace :install do
     sym("Vim/vimrc", "~/.vimrc")
     sym("Vim", "~/.vim")
     spawner("mkdir -p ~/.vim/swapfiles/")
+    spawner("mkdir -p ~/.vim/undodir/")
   end
 
   # Symlink zshrc

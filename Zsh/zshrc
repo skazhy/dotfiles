@@ -20,6 +20,7 @@ relative_path() {
 source $DOTFILES_DIR/Zsh/git-prompt.sh
 export PS1='$(relative_path)% $(git_prompt_string)%% '
 
+export DO_NOT_TRACK=1  # https://consoledonottrack.com
 
 grin() { grep --exclude-dir={.git,target,checkouts} -RIn "$*" ./*; }
 frin()  { find ./* -name "*$**"; }
