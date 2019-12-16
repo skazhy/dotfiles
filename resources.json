@@ -21,12 +21,6 @@
         "uri": "https://raw.githubusercontent.com/wavded/vim-stylus/master/syntax/stylus.vim"
       }
     ],
-    "autoload": [
-      {
-        "name": "pathogen.vim",
-        "uri": "https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
-      }
-    ],
     "indent": [
       {
         "name": "python.vim",

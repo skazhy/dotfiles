@@ -1,27 +1,24 @@
 [submodule "Vim/plugins/fugitive"]
-	path = Vim/plugins/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+   path = Vim/pack/plugins/start/fugitive
+   url = https://github.com/tpope/vim-fugitive.git
 [submodule "Vim/plugins/zencoding"]
-	path = Vim/plugins/zencoding
-	url = https://github.com/mattn/emmet-vim
+   path = Vim/pack/plugins/start/zencoding
+   url = https://github.com/mattn/emmet-vim
 [submodule "Vim/plugins/Tabular"]
-	path = Vim/plugins/Tabular
-	url = https://github.com/godlygeek/tabular
+   path = Vim/plugins/Tabular
+   url = https://github.com/godlygeek/tabular
 [submodule "Vim/plugins/surround"]
-	path = Vim/plugins/surround
-	url = https://github.com/tpope/vim-surround
+   path = Vim/pack/plugins/start/surround
+   url = https://github.com/tpope/vim-surround
 [submodule "Vim/plugins/snipmate"]
-	path = Vim/plugins/snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-[submodule "Vim/plugins/gundo"]
-	path = Vim/plugins/gundo
-	url = git://github.com/sjl/gundo.vim.git
+   path = Vim/pack/plugins/start/snipmate
+   url = https://github.com/garbas/vim-snipmate.git
 [submodule "Vim/plugins/nerdtree"]
-	path = Vim/plugins/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+   path = Vim/pack/plugins/start/nerdtree
+   url = git@github.com:scrooloose/nerdtree.git
 [submodule "Vim/plugins/clojure"]
-	path = Vim/plugins/clojure
-	url = git@github.com:guns/vim-clojure-static.git
+   path = Vim/plugins/clojure
+   url = git@github.com:guns/vim-clojure-static.git
 [submodule "Vim/plugins/fireplace"]
-	path = Vim/plugins/fireplace
-	url = git://github.com/tpope/vim-fireplace.git
+   path = Vim/pack/plugins/start/fireplace
+   url = git://github.com/tpope/vim-fireplace.git

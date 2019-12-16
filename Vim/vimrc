@@ -1,11 +1,4 @@
 " Reload .vimrc - :so %
-"
-" Language specific stuff is located
-" in ftplugin and ftdetect folders
-
-" Start pathogen & load plugins
-exec pathogen#infect('plugins/{}')
-exec pathogen#helptags()
 
 filetype plugin on
 filetype indent on
