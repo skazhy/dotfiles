@@ -35,6 +35,7 @@ pom.xml.asc
 checkouts/
 figwheel_server.log
 .eastwood
+hs_err_pid*
 
 # Node, psc, Elm
 elm-stuff
