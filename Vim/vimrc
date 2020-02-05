@@ -117,5 +117,6 @@ autocmd InsertLeave * :set relativenumber
 set formatoptions+=j " Delete comment characters when joining lines
 
 set rtp+=/usr/local/opt/fzf
+let $FZF_DEFAULT_COMMAND="rg --files --hidden -g '!.git/*'"
 
 cd ~/projects

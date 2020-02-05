@@ -22,8 +22,9 @@ extensions for `macos` and `openbsd`. (ie, `rake patch:macos`).
 
 ### Vim
 
-I use the following Vim plugins (managed with git submodules + native Vim 8
-package maanger)
+FZF and ripgrep are required: `brew install fzf ripgrep`. I use the
+following Vim plugins (managed with git submodules + native Vim 8 package
+manager)
 
 * [emmet (née zencoding)](https://vimawesome.com/plugin/emmet-vim)
 * [fireplace](https://vimawesome.com/plugin/vim-fireplace)
