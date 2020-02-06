@@ -44,6 +44,11 @@ if has("gui_running")
   set incsearch
 end
 
+if has("gui_macvim")
+  " Remove `enter full screen` touch bar button
+  aunmenu TouchBar.EnterFullScreen
+end
+
 set gdefault  " Invert `g` flag behavior for search/replace.
 
 " Disable ex mode
