@@ -50,7 +50,8 @@ DISABLE_AUTO_TITLE=true
 
 # Expand SHAs to full-blown github URIs
 expand() {
-  BASEURI="http://github.com/$(git config --get remote.origin.url | awk -F "." '{print $(NF-1)}' | cut -c 5-)/commit/"
+  origin=$(git config --get remote.origin.url | awk -F ":" '{print $2}' | rev | cut -c 5- | rev)
+  BASEURI="http://github.com/$origin/commit/"
   [ "$#" -eq "0" ] && echo $BASEURI`git rev-parse HEAD` || echo $BASEURI`git rev-parse $1`
 }
 
