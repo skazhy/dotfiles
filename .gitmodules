@@ -16,9 +16,6 @@
 [submodule "Vim/plugins/nerdtree"]
    path = Vim/pack/plugins/start/nerdtree
    url = git@github.com:scrooloose/nerdtree.git
-[submodule "Vim/plugins/clojure"]
-   path = Vim/plugins/clojure
-   url = git@github.com:guns/vim-clojure-static.git
 [submodule "Vim/plugins/fireplace"]
    path = Vim/pack/plugins/start/fireplace
    url = git://github.com/tpope/vim-fireplace.git
