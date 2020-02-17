@@ -22,4 +22,8 @@ GSD_BLACKLIST=(
   'amazon.com'
   'massdrop.com'
   'youneedabudget.com'
+  'strava.com'
+  'endomondo.com'
+  'vox.com'
+  'letterboxd.com'
 )
