@@ -122,7 +122,6 @@ namespace :install do
     spawner("mkdir -p ~/.zsh")
     sym("Zsh/autocomplete", "~/.zsh/autocomplete")
     sym("Zsh/zshrc", "~/.zshrc")
-    spawner("rm -f ~/.zcompdump; compinit")
   end
 
   task :all => [:bash, :clojure, :fonts, :git, :ruby, :haskell, :scala, :vim, :tmux, :zsh, "update:all"]
@@ -155,6 +154,15 @@ namespace :update do
         fetch res, "Vim/#{res_name}/#{res["name"]}"
       end
     end
+  end
+
+  # Downlaod zhs resources
+  task :zsh do
+    resources["Zsh"]["autocomplete"].each do |ac|
+      fetch ac, "Zsh/autocomplete/_#{ac["name"]}"
+    end
+    # rebuild the autocomplete cache
+    spawner("rm -f ~/.zcompdump; compinit")
   end
 
   # update all

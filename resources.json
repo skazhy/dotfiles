@@ -36,5 +36,13 @@
         "name": "mensch.ttf",
         "uri": "http://robey.lag.net/downloads/mensch.ttf"
       }
-  ]
+  ],
+  "Zsh": {
+    "autocomplete": [
+      {
+        "name": "_cargo",
+        "uri": "https://raw.githubusercontent.com/rust-lang/cargo/master/src/etc/_cargo"
+      }
+    ]
+  }
 }
