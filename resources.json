@@ -19,6 +19,9 @@
       }, {
         "name": "stylus.vim",
         "uri": "https://raw.githubusercontent.com/wavded/vim-stylus/master/syntax/stylus.vim"
+      }, {
+        "name": "reason.vim",
+        "uri": "https://raw.githubusercontent.com/reasonml-editor/vim-reason-plus/master/syntax/reason.vim"
       }
     ],
     "indent": [
