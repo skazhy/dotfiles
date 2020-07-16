@@ -34,6 +34,7 @@ _lein() {
       "run[Run a -main function with optional command-line arguments.]" \
       "search[Search remote maven repositories for matching jars.]" \
       "show-profiles[List all available profiles or display one if given an argument.]" \
+      "kaocha[Run the project's tests with kaocha test runner.]" \
       "test[Run the project's tests.]" \
       "trampoline[Run a task without nesting the project's JVM inside Leiningen's.]" \
       "uberjar[Package up the project files and dependencies into a jar file.]" \
@@ -64,5 +65,9 @@ _lein_run() {
 }
 
 _lein_test() {
+  _lein_namespaces "test/"
+}
+
+_lein_kaocha() {
   _lein_namespaces "test/"
 }
