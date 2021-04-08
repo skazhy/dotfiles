@@ -31,6 +31,7 @@
     gri = grep -i -I
     sub = submodule
     sh = show
+    sw = show --ignore-all-space
     shs = show head --stat
     rb = rebase
     rbc = rebase --continue
