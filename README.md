@@ -22,7 +22,8 @@ extensions for `macos` and `openbsd`. (ie, `rake patch:macos`).
 
 ### Vim
 
-FZF and ripgrep are required: `brew install fzf ripgrep`. I use the
+FZF and ripgrep are required: `brew install fzf ripgrep`. I am using
+[FiraCode](https://github.com/tonsky/FiraCode) in the non-terminal Vim. I use the
 following Vim plugins (managed with git submodules + native Vim 8 package
 manager)
 

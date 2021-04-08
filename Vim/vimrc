@@ -1,4 +1,5 @@
 " Reload .vimrc - :so %
+" Config that only applies to gVim is in .gvimrc
 
 filetype plugin on
 filetype indent on
@@ -40,15 +41,6 @@ if has("wildmenu")
   set wildmenu
 end
 
-if has("gui_running")
-  set incsearch
-end
-
-if has("gui_macvim")
-  " Remove `enter full screen` touch bar button
-  aunmenu TouchBar.EnterFullScreen
-end
-
 set gdefault  " Invert `g` flag behavior for search/replace.
 
 " Disable ex mode
@@ -66,7 +58,6 @@ set display+=lastline   " Show very long lines nicely
 colorscheme solarized
 
 set background=dark
-
 
 " Disable bell
 set noerrorbells visualbell t_vb=

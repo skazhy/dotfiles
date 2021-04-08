@@ -1,0 +1,9 @@
+set macligatures
+set incsearch
+set guifont=Fira\ Code:h12
+
+if has("gui_macvim")
+  " Remove `enter full screen` touch bar button
+  aunmenu TouchBar.EnterFullScreen
+  aunmenu TouchBar.-characterpicker-
+end

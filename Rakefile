@@ -114,6 +114,7 @@ namespace :install do
     spawner("touch Vim/local.vim")
     spawner("mkdir -p ~/projects")  # Vim uses projects as root dir
     sym("Vim/vimrc", "~/.vimrc")
+    sym("Vim/gvimrc", "~/.gvimrc")
     sym("Vim", "~/.vim")
     spawner("mkdir -p ~/.vim/swapfiles/")
     spawner("mkdir -p ~/.vim/undodir/")
