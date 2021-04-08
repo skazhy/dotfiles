@@ -1,4 +1,4 @@
-{:user {:plugins [[cider/cider-nrepl "0.22.4"]
+{:user {:plugins [[nrepl/lein-nrepl "0.3.2"]
                   [lein-bikeshed "0.5.1"]
                   [lein-kibit "0.0.8"]
                   [lein-try "0.4.3"]
