@@ -29,7 +29,7 @@ set history=50      " Remember 50 last commands / patterns
 set scrolloff=4     " Keeping 4 line margin above/below cursor
 set number          " Start each line with line number
 set ignorecase smartcase
-set wildignore=*.pyc,*.pdf,*.iml,project/,target/,*.gif
+set wildignore=*.pyc,*.pdf,*.iml,project/,target/,*.gif,*.hi,*.o
 set undodir=~/.vim/undodir
 
 if has("wildignorecase")  " Ignore filename case
