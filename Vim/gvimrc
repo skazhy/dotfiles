@@ -2,8 +2,12 @@ set macligatures
 set incsearch
 set guifont=Fira\ Code:h12
 
+colorscheme solarized
+set background=dark
+
 if has("gui_macvim")
   " Remove `enter full screen` touch bar button
   aunmenu TouchBar.EnterFullScreen
   aunmenu TouchBar.-characterpicker-
+  set guioptions=
 end
