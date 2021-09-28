@@ -16,7 +16,7 @@ Installing dotfiles will add minimal set that works on all *NIX systems. To
 add specific extensions for each OS, use `patch`. Currently there are specific
 extensions for `macos` and `openbsd`. (ie, `rake patch:macos`).
 
-* tmux 2.7
+* tmux 3.2a
 * vim 8.1
 * zsh 5.3
 
