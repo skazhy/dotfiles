@@ -22,6 +22,9 @@
       }, {
         "name": "reason.vim",
         "uri": "https://raw.githubusercontent.com/reasonml-editor/vim-reason-plus/master/syntax/reason.vim"
+      }, {
+        "name": "toml.vim",
+        "uri": "https://raw.githubusercontent.com/cespare/vim-toml/main/syntax/toml.vim"
       }
     ],
     "indent": [
