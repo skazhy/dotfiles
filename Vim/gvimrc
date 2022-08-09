@@ -11,3 +11,6 @@ if has("gui_macvim")
   aunmenu TouchBar.-characterpicker-
   set guioptions=
 end
+
+command! PresentingStart :set guifont=Fira\ Code:h16
+command! PresentingEnd :set guifont=Fira\ Code:h12

@@ -52,3 +52,5 @@ function! MvCljFile(newPath)
   exe 'write'
 endfunction
 command! -nargs=1 -complete=file -bar MvCljFile call MvCljFile('<args>')
+
+nnoremap ce :Eval<CR>
