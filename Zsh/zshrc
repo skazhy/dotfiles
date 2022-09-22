@@ -50,9 +50,15 @@ DISABLE_AUTO_TITLE=true
 
 # Expand SHAs to full-blown github URIs
 expand() {
-  origin=$(git config --get remote.origin.url | awk -F ":" '{print $2}' | rev | cut -c 5- | rev)
-  BASEURI="http://github.com/$origin/commit/"
-  [ "$#" -eq "0" ] && echo $BASEURI`git rev-parse HEAD` || echo $BASEURI`git rev-parse $1`
+    origin=$(git config --get remote.origin.url | awk -F ":" '{print $2}' | rev | cut -c 5- | rev)
+    BASEURI="http://github.com/$origin"
+    if [ "$#" -eq "0" ]; then
+        echo $BASEURI/commit/`git rev-parse HEAD`
+    elif [[ "$1" = "pr" || "$1" = "PR" ]]; then
+        echo $BASEURI/pull/`git rev-parse --abbrev-ref HEAD`
+    else
+        echo $BASEURI/commit/`git rev-parse $1`
+    fi
 }
 
 # Remove an IP from known_hosts file.
