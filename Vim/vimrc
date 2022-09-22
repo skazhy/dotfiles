@@ -53,6 +53,7 @@ set guioptions-=T       " Remove toolbar
 set guioptions-=m       " Remove menubar
 set background=dark
 set nohlsearch
+set incsearch
 set cursorline
 set display+=lastline   " Show very long lines nicely
 
