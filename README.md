@@ -19,6 +19,8 @@ extensions for `macos` and `openbsd`. (ie, `rake patch:macos`).
 * tmux 3.2a
 * vim 8.1
 * zsh 5.3
+* Emacs 28.2 with Doom 3.0.0-pre ([setup
+  instructions](https://github.com/doomemacs/doomemacs/blob/400fa0836d830ac409a67a4c4af3012b5e07dc60/docs/getting_started.org))
 
 ### Vim
 

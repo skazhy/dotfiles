@@ -120,6 +120,11 @@ namespace :install do
     spawner("mkdir -p ~/.vim/undodir/")
   end
 
+  # Symlink Doom Emacs config
+  task :emacs do
+    sym("Emacs/doom.d", "~/.doom.d")
+  end
+
   # Symlink zshrc
   task :zsh do
     spawner("mkdir -p ~/.zsh")
