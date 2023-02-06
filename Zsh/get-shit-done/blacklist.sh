@@ -22,4 +22,7 @@ GSD_BLACKLIST=(
   'strava.com'
   'vox.com'
   'letterboxd.com'
+  'chess.com'
+  'chess24.com'
+  'lichess.org'
 )
