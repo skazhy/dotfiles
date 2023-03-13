@@ -107,6 +107,7 @@ namespace :install do
   # Symlink tmux config
   task :tmux do
     sym("Tmux/tmux.conf", "~/.tmux.conf")
+    spawner("touch ~/.tmux.conf.local")
   end
 
   # Get all plugins and symlink Vim config

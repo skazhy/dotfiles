@@ -40,7 +40,7 @@ procgrep() {
 
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
 
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin:~/.emacs.d/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin:~/.emacs.d/bin:~/.cargo/bin
 
 # Don't mess with window title
 DISABLE_AUTO_TITLE=true
