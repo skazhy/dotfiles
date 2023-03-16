@@ -45,13 +45,20 @@
 (setq lsp-modeline-code-actions-enable nil)
 (setq display-line-numbers 'relative)
 
+(setq line-spacing 1)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
 ;;   (after! PACKAGE
 ;;     (setq x y))
-;;
+(after! cider
+  (map! (:localleader
+         (:map (clojure-mode-map clojurescript-mode-map clojurec-mode-map)
+               (:prefix ("l" . "LSP")
+                        "d" #'lsp-find-definition
+                        "r" #'lsp-find-references)))))
+
 ;; The exceptions to this rule:
 ;;
 ;;   - Setting file/directory variables (like `org-directory')
