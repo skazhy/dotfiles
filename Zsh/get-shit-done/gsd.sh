@@ -2,7 +2,7 @@
 
 # A super simple version of the "get-shit-done" thing.
 #
-# To load blacklist correctly, this needs to be aliased
+# To load blocklist correctly, this needs to be aliased
 # Through sudo and the location of dotfiles dir as the
 # first argument.
 
@@ -15,13 +15,13 @@ function work() {
     exit 1
   fi
 
-  source $1/Zsh/get-shit-done/blacklist.sh
+  source $1/Zsh/get-shit-done/blocklist.sh
 
   cp $hosts_file $hosts_bak
 
   echo "## getting shit done" >> $hosts_file
 
-  for site in "${GSD_BLACKLIST[@]}"
+  for site in "${GSD_BLOCKLIST[@]}"
   do
     echo "127.0.0.1 $site" >> $hosts_file
     echo "127.0.0.1 www.$site" >> $hosts_file

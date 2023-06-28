@@ -1,7 +1,7 @@
-# Sites that get blacklisted when I'm
+# Sites that get blocklisted when I'm
 # getting some serious shit done.
 
-GSD_BLACKLIST=(
+GSD_BLOCKLIST=(
   'discogs.com'
   'facebook.com'
   'instagram.com'
@@ -25,4 +25,8 @@ GSD_BLACKLIST=(
   'chess.com'
   'chess24.com'
   'lichess.org'
+  'ebird.org'
+  'omnivore.app'
+  'nytimes.com'
+  'xeno-canto.org'
 )
