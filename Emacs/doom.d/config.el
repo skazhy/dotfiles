@@ -58,6 +58,12 @@
                (:prefix ("l" . "LSP")
                         "d" #'lsp-find-definition
                         "r" #'lsp-find-references)))))
+(after! rustic
+  (map! (:localleader
+         (:map (rust-mode-map)
+               (:prefix ("l" . "LSP")
+                        "d" #'lsp-find-definition
+                        "r" #'lsp-find-references)))))
 
 ;; The exceptions to this rule:
 ;;
