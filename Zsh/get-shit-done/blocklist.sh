@@ -29,4 +29,5 @@ GSD_BLOCKLIST=(
   'omnivore.app'
   'nytimes.com'
   'xeno-canto.org'
+  'dabasdati.lv'
 )
