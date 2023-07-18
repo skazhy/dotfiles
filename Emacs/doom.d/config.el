@@ -90,3 +90,9 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(defun browse-at-remote-pr ()
+  (interactive)
+  (let* ((remote-ref (browse-at-remote--remote-ref (buffer-name)))
+         (target-repo (browse-at-remote--get-url-from-remote (car remote-ref))))
+    (browse-url (format "%s/pull/%s" (cdr target-repo) (browse-at-remote--get-local-branch)))))
