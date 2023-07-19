@@ -44,6 +44,7 @@
 (setq lsp-diagnostic-stats nil)
 (setq lsp-modeline-code-actions-enable nil)
 (setq display-line-numbers 'relative)
+(setq css-fontify-colors nil)
 
 (setq line-spacing 1)
 
