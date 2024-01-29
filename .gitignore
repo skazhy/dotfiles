@@ -13,3 +13,7 @@ Fonts/Fonts
 Backup/
 Zsh/platform.sh
 Zsh/autocomplete
+
+Emacs/plain/build/
+# Symlinked from github.com/skazhy/advent
+Emacs/doom.d/aoc.el

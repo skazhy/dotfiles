@@ -30,4 +30,5 @@ GSD_BLOCKLIST=(
   'nytimes.com'
   'xeno-canto.org'
   'dabasdati.lv'
+  'toot.lv'
 )
