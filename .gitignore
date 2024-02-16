@@ -14,6 +14,9 @@ Backup/
 Zsh/platform.sh
 Zsh/autocomplete
 
-Emacs/plain/build/
 # Symlinked from github.com/skazhy/advent
 Emacs/doom.d/aoc.el
+
+Emacs/plain/build/
+Emacs/plain/straight/
+Emacs/plain/url/

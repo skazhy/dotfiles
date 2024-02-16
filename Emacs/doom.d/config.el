@@ -66,6 +66,11 @@
                         "d" #'lsp-find-definition
                         "r" #'lsp-find-references)))))
 
+(use-package! magit
+  :config
+  (transient-append-suffix 'magit-revert "-E"
+    '("-n" "Do not create commit" "--no-commit")))
+
 ;; The exceptions to this rule:
 ;;
 ;;   - Setting file/directory variables (like `org-directory')
