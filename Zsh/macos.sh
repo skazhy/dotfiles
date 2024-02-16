@@ -1,6 +1,4 @@
-# Switching between JDK versions, works on OS X only.
-
-export PATH=$PATH:~/Library/Haskell/bin
+source ~/.ghcup/env
 
 # Switching between profiles in iTerm2
 

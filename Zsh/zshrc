@@ -40,7 +40,7 @@ procgrep() {
 
 ssh-fingerprints() { for i in ~/.ssh/*.pub; do ssh-keygen -l -f "$i"; done }
 
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin:~/.emacs.d/bin:~/.cargo/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:~/bin:~/.emacs.d/bin:~/.cargo/bin:~/.ghcup/bin
 
 # Don't mess with window title
 DISABLE_AUTO_TITLE=true
@@ -81,8 +81,6 @@ export SAVEHIST=2000
 export HISTFILE="$HOME/.history"
 
 fpath=(~/.zsh/autocomplete $fpath)
-
-alias curlj="curl -H 'Content-Type: application/json'"
 
 # Load platform-specific stuff, if any
 [[ -s "$HOME/.zsh/platform.sh" ]] && source "$HOME/.zsh/platform.sh"
