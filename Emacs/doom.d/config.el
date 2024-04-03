@@ -102,3 +102,6 @@
   (let* ((remote-ref (browse-at-remote--remote-ref (buffer-name)))
          (target-repo (browse-at-remote--get-url-from-remote (car remote-ref))))
     (browse-url (format "%s/pull/%s" (cdr target-repo) (browse-at-remote--get-local-branch)))))
+
+(add-hook 'sql-mode-hook (lambda ()
+                           (add-to-list 'imenu-generic-expression '("HugSQL" "^-- :name \\([^\t \n]+\\)\.\*$" 1) t)))
