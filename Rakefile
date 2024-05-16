@@ -93,6 +93,12 @@ namespace :install do
     sym("Ruby/gemrc", "~/.gemrc")
   end
 
+  # Symlink Nix
+  task :nix do
+    spawner("mkdir -p ~/.config/nix")
+    sym("Nix/nix.conf", "~/.config/nix/nix.conf")
+  end
+
   # Symlink Haskell Stack stuff
   task :haskell do
     spawner("mkdir -p ~/.stack")
@@ -133,7 +139,7 @@ namespace :install do
     sym("Zsh/zshrc", "~/.zshrc")
   end
 
-  task :all => [:bash, :clojure, :fonts, :git, :ruby, :haskell, :scala, :vim, :tmux, :zsh, "update:all"]
+  task :all => [:bash, :clojure, :fonts, :git, :ruby, :nix, :haskell, :scala, :vim, :tmux, :zsh, "update:all"]
 
   # Symlink OpenBox config
   task :openbox do
