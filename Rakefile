@@ -69,8 +69,10 @@ namespace :install do
   # Symlink Clojure and Leinigen config
   task :clojure do
     spawner("mkdir -p ~/.lein")
+    spawner("mkdir -p ~/.clojure")
     spawner("mkdir -p ~/.shadow-cljs")
     sym("Clojure/profiles.clj", "~/.lein/profiles.clj")
+    sym("Clojure/deps.edn", "~/.clojure/deps.edn")
     sym("Clojure/shadow-cljs-config.edn", "~/.shadow-cljs/config.edn")
   end
 

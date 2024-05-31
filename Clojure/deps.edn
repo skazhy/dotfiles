@@ -1,0 +1,2 @@
+{:deps {cider/cider-nrepl {:mvn/version "0.45.0"}
+        refactor-nrepl/refactor-nrepl {:mvn/version "3.10.0"}}}
