@@ -41,7 +41,6 @@
 (setq org-directory "~/org/")
 
 (setq lsp-lens-enable nil)
-(setq lsp-diagnostic-stats nil)
 (setq lsp-modeline-code-actions-enable nil)
 (setq display-line-numbers 'relative)
 (setq css-fontify-colors nil)
@@ -105,3 +104,6 @@
 
 (add-hook 'sql-mode-hook (lambda ()
                            (add-to-list 'imenu-generic-expression '("HugSQL" "^-- :name \\([^\t \n]+\\)\.\*$" 1) t)))
+
+(global-vi-tilde-fringe-mode)
+(global-display-line-numbers-mode)

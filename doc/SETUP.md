@@ -15,8 +15,7 @@ Last tested on macOS Ventura 13.6.
 
 ### Emacs
 
-* Install Emacs and Doom by following [this guide](https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#on-macos)
-    * Use `emacs-mac` formula option
+* [See here](../Emacs/README.md#setup)
 
 ### Vim
 
