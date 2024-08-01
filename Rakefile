@@ -121,7 +121,6 @@ namespace :install do
   # Get all plugins and symlink Vim config
   task :vim => "update:vim" do
     spawner("touch Vim/local.vim")
-    spawner("mkdir -p ~/projects")  # Vim uses projects as root dir
     sym("Vim/vimrc", "~/.vimrc")
     sym("Vim/gvimrc", "~/.gvimrc")
     sym("Vim", "~/.vim")
@@ -131,6 +130,7 @@ namespace :install do
 
   # Symlink Doom Emacs config
   task :emacs do
+    spawner("mkdir -p Emacs/doom.d/snippets")
     sym("Emacs/doom.d", "~/.doom.d")
   end
 

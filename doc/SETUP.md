@@ -19,7 +19,7 @@ Last tested on macOS Ventura 13.6.
 
 ### Vim
 
-* Install MacVim from [macvim.org](https://macvim.org/)
+* [See here](../Vim/README.md#setup)
 
 ### macOS
 
