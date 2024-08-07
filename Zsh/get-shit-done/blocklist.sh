@@ -31,4 +31,5 @@ GSD_BLOCKLIST=(
   'xeno-canto.org'
   'dabasdati.lv'
   'toot.lv'
+  'x.com'
 )
