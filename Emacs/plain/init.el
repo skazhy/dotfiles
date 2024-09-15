@@ -14,7 +14,9 @@
 (add-to-list 'load-path "~/dotfiles/emacs/plain/elisp")
 
 (require 'straight)
+(require 'keybindings)
 (require 'emacs)
 (require 'evil)
+(require 'projectile)
 
 (provide 'init)

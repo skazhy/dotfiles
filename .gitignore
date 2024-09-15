@@ -21,3 +21,5 @@ Emacs/plain/build/
 Emacs/plain/straight/
 Emacs/plain/url/
 *eln-cache/
+*.el~
+Emacs/plain/projectile-bookmarks.eld
