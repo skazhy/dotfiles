@@ -107,3 +107,15 @@
 
 (global-vi-tilde-fringe-mode)
 (global-display-line-numbers-mode)
+
+(defun my/format-or-indent ()
+  "Format region using LSP if available, otherwise use Evil indentation."
+  (interactive)
+  (if (and (bound-and-true-p lsp-mode)
+           (lsp--capability "documentRangeFormattingProvider"))
+      (call-interactively #'lsp-format-region)
+    (call-interactively #'evil-indent)))
+
+;; Replace the default Evil mode = command
+(evil-define-key 'normal 'global (kbd "=") 'my/format-or-indent)
+(evil-define-key 'visual 'global (kbd "=") 'my/format-or-indent)
