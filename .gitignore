@@ -18,6 +18,8 @@ Zsh/autocomplete
 Emacs/doom.d/aoc.el
 
 Emacs/plain/build/
+Emacs/plain/elpa/
+Emacs/plain/recentf
 Emacs/plain/straight/
 Emacs/plain/url/
 *eln-cache/

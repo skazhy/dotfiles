@@ -1,22 +1,60 @@
 ;;; init.el --- Description -*- lexical-binding: t; -*-
 
-;; Make M-x work correctly in Emacs-mac
-(cond ((eq system-type 'darwin)
-       (setq mac-option-modifier 'meta)))
+;;; Code:
+;; Package setup
+(require 'package)
 
-(tool-bar-mode -1)             ; Hide the outdated icons
-(scroll-bar-mode -1)           ; Hide the always-visible scrollbar
-(setq inhibit-splash-screen t) ; Remove the "Welcome to GNU Emacs" splash screen
-(setq use-file-dialog nil)      ; Ask for textual confirmation instead of GUI
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
 
-;; Install straight.el
+(setq package-selected-packages '(evil general ivy projectile))
 
-(add-to-list 'load-path "~/dotfiles/emacs/plain/elisp")
+(unless package-archive-contents
+  (package-refresh-contents))
+(package-install-selected-packages)
 
-(require 'straight)
-(require 'keybindings)
-(require 'emacs)
+(setq initial-scratch-message nil)
+(setq scroll-conservatively 101 scroll-margin 2)
+
+;; Evil
+(setq evil-want-keybinding nil)
 (require 'evil)
+(evil-mode t)
+
+;; which-key
+(setq which-key-idle-delay 0.5)
+(which-key-mode)
+
+;; ivy
+(require 'ivy)
+(ivy-mode t)
+
+;; general
+(require 'general)
+
+(general-create-definer leader-keys
+    :states '(normal insert visual emacs)
+    :keymaps 'override
+    :prefix "SPC"
+    :global-prefix "C-SPC")
+
+(leader-keys
+ :keymaps 'override
+ ":" 'execute-extended-command
+ "<escape>" '(keyboard-escape-quit :which-key t))
+
+;; projectile
 (require 'projectile)
+(leader-keys
+    :states 'normal
+    "SPC" '(projectile-find-file :which-key "find file")
+
+    "p" '(:ignore t :which-key "projects")
+    "p <escape>" '(keyboard-escape-quit :which-key t)
+    "p p" '(projectile-switch-project :which-key "switch project")
+    "p a" '(projectile-add-known-project :which-key "add project"))
+(projectile-mode +1)
 
 (provide 'init)
+
+;;; init.el ends here
