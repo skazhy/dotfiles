@@ -1,2 +1,3 @@
 {:deps {cider/cider-nrepl {:mvn/version "0.45.0"}
+        com.github.bhauman/clojure-mcp {:git/sha "080b29b" :git/tag "v0.1.4-alpha"}
         refactor-nrepl/refactor-nrepl {:mvn/version "3.10.0"}}}
