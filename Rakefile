@@ -141,7 +141,12 @@ namespace :install do
     sym("Zsh/zshrc", "~/.zshrc")
   end
 
-  task :all => [:bash, :clojure, :fonts, :git, :ruby, :nix, :haskell, :scala, :vim, :tmux, :zsh, "update:all"]
+  task :ghostty do
+    spawner("mkdir -p ~/.config/ghostty")
+    sym("Ghostty/config", "~/.config/ghostty/config")
+  end
+
+  task :all => [:bash, :clojure, :fonts, :git, :ruby, :nix, :haskell, :scala, :vim, :tmux, :ghostty, :zsh, "update:all"]
 
   # Symlink OpenBox config
   task :openbox do

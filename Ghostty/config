@@ -1,0 +1,3 @@
+theme = Solarized Dark - Patched
+shell-integration = fish
+command = /opt/homebrew/bin/fish
