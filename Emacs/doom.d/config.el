@@ -42,6 +42,8 @@
 
 (setq lsp-lens-enable nil)
 (setq lsp-modeline-code-actions-enable nil)
+(setq lsp-modeline-workspace-status-enable nil)
+(setq lsp-modeline-diagnostics-enable nil)
 (setq display-line-numbers 'relative)
 (setq css-fontify-colors nil)
 
