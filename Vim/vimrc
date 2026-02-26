@@ -84,7 +84,6 @@ set statusline+=%f\      " file name
 set statusline+=%m%r%w   " flags (modified, readonly, preview)
 
 set statusline+=[%{strlen(&ft)?&ft:'none'}]                        " filetype
-set statusline+=%{fugitive#statusline()}%=                         " Git branch
 set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
 set statusline+=%-14.(%l,%c%V%)\ %<%P                              " offset
 
