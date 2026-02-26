@@ -40,6 +40,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+;; Lenses show test counts next to fn definition
 (setq lsp-lens-enable nil)
 (setq lsp-modeline-code-actions-enable nil)
 (setq lsp-modeline-workspace-status-enable nil)
